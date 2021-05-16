@@ -2,7 +2,7 @@
   import { createEventDispatcher } from "svelte";
 	import edit from './edit.svg';
 	import eraser from './eraser.svg';
-  import { translate } from "$lib/i18n";
+  import { i18n } from "$lib/i18n";
 
   let isEraser = false;
   const dispatch = createEventDispatcher();
@@ -16,9 +16,9 @@
 <button on:click={toogle}>
   {#if isEraser}
     <img src={edit} alt="Draw" />
-    <span>{$translate("draw")}</span>
+    <span>{$i18n("draw")}</span>
   {:else}
     <img src={eraser} alt="Erase" />
-    <span>{$translate("erase")}</span>
+    <span>{$i18n("erase")}</span>
   {/if}
 </button>
