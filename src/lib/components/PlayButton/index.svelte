@@ -2,6 +2,7 @@
   import { createEventDispatcher } from "svelte";
 	import pause from './pause.svg';
 	import play from './play.svg';
+  import { translate } from "$lib/i18n";
 
   let isPlaying = false;
   const dispatch = createEventDispatcher();
@@ -15,10 +16,10 @@
 <button class="border" on:click={toogle}>
   {#if isPlaying}
     <img src={pause} alt="Pause" />
-    <span>Pause</span>
+    <span>{$translate("pause")}</span>
   {:else}
     <img src={play} alt="Play" />
-    <span>Play</span>
+    <span>{$translate("play")}</span>
   {/if}
 </button>
 
