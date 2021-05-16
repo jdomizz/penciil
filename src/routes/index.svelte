@@ -5,10 +5,10 @@
 <script lang="ts">
   import AnimationView from '$lib/AnimationView/index.svelte';
 	import CanvasView from '$lib/CanvasView/index.svelte';
-	import PlayButton from "$lib/PlayButton/index.svelte";
-  import ThemeButton from "$lib/ThemeButton/index.svelte";
-  import EditButton from "$lib/EditButton/index.svelte";
-  import SaveButton from "$lib/SaveButton/index.svelte";
+	import PlayButton from "$lib/components/PlayButton/index.svelte";
+  import ThemeButton from "$lib/components/ThemeButton/index.svelte";
+  import EditButton from "$lib/components/EditButton/index.svelte";
+  import SaveButton from "$lib/components/SaveButton/index.svelte";
 	import '../app.css';
 
 	let isEraserMode = false;
