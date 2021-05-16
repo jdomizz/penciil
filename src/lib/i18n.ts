@@ -3,22 +3,19 @@
 import { writable, derived } from 'svelte/store';
 import messages from "../locale/messages";
 
-const localizedDict = derived([writable(messages), writable('es')], ([$dict, $locale]) => {
-  if (!$dict || !$locale) return;
-  return($dict[$locale]);
+export const locale = writable('es');
+export const file = writable<Record<string,Record<string,unknown>>>(messages);
+
+const translations = derived([file, locale], ([$messages, $locale]) => {
+  return $messages[$locale];
 });
 
-export const i18n = derived(localizedDict, ($localizedDict) => {
-  return(createMessageFormatter($localizedDict));
+export const i18n = derived(translations, ($translations) => {
+  return (key: string) => getMessage(key, $translations);
 });
 
-const getMessageFromLocalizedDict = (id: string, localizedDict) => {
-  const splitId = id.split('.');
-  let message = {...localizedDict};
-  splitId.forEach((partialId) => {
-    message = message[partialId];
-  });
-  return(message);
+const getMessage = (key: string, localized: Record<string,unknown>) => {
+  return key
+    .split('.')
+    .reduce((accumulator, item) => accumulator[item], {...localized}) as string;
 };
-
-const createMessageFormatter = (localizedDict) => (id) => getMessageFromLocalizedDict(id, localizedDict);

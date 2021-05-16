@@ -16,10 +16,10 @@
 <button class="border" on:click={toogle}>
   {#if isPlaying}
     <img src={pause} alt="Pause" />
-    <span>{$i18n("pause")}</span>
+    <span>{$i18n("button.pause")}</span>
   {:else}
     <img src={play} alt="Play" />
-    <span>{$i18n("play")}</span>
+    <span>{$i18n("button.play")}</span>
   {/if}
 </button>
 

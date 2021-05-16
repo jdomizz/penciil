@@ -16,9 +16,9 @@
 <button on:click={toogle}>
   {#if isEraser}
     <img src={edit} alt="Draw" />
-    <span>{$i18n("draw")}</span>
+    <span>{$i18n("button.draw")}</span>
   {:else}
     <img src={eraser} alt="Erase" />
-    <span>{$i18n("erase")}</span>
+    <span>{$i18n("button.erase")}</span>
   {/if}
 </button>

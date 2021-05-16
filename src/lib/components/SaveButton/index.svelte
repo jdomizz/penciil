@@ -8,5 +8,5 @@
 
 <button disabled={true} on:click={() => dispatch("click")}>
   <img src={save} alt="Save" />
-  <span>{$i18n("save")}</span>
+  <span>{$i18n("button.save")}</span>
 </button>

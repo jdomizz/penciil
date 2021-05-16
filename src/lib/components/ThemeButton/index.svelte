@@ -16,9 +16,9 @@
 <button on:click={toogle}>
   {#if isDarkTheme}
     <img src={sun} alt="Sun" />
-    <span>{$i18n("light")}</span>
+    <span>{$i18n("button.light")}</span>
   {:else}
     <img src={moon} alt="Moon" />
-    <span>{$i18n("dark")}</span>
+    <span>{$i18n("button.dark")}</span>
   {/if}
 </button>
