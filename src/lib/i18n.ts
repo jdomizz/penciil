@@ -1,21 +1,20 @@
-// Based on https://github.com/higsch/quick-svelte-i18n
-
 import { writable, derived } from 'svelte/store';
-import messages from "../locale/messages";
+import messagesFile from "../locale/messages";
 
 export const locale = writable('es');
-export const file = writable<Record<string,Record<string,unknown>>>(messages);
 
-const translations = derived([file, locale], ([$messages, $locale]) => {
+export const messages = writable<Record<string,Record<string,unknown>>>(messagesFile);
+
+const translations = derived([messages, locale], ([$messages, $locale]) => {
   return $messages[$locale];
 });
 
-export const i18n = derived(translations, ($translations) => {
+export const message = derived(translations, ($translations) => {
   return (key: string) => getMessage(key, $translations);
 });
 
-const getMessage = (key: string, localized: Record<string,unknown>) => {
+const getMessage = (key: string, translations: Record<string,unknown>) => {
   return key
     .split('.')
-    .reduce((accumulator, item) => accumulator[item], {...localized}) as string;
+    .reduce((accumulator, item) => accumulator[item], {...translations}) as string;
 };

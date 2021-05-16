@@ -2,7 +2,7 @@
   import { createEventDispatcher } from "svelte";
   import moon from "./moon.svg";
   import sun from "./sun.svg";
-  import { i18n } from "$lib/i18n";
+  import { message } from "$lib/i18n";
 
   let isDarkTheme = false;
   const dispatch = createEventDispatcher();
@@ -16,9 +16,9 @@
 <button on:click={toogle}>
   {#if isDarkTheme}
     <img src={sun} alt="Sun" />
-    <span>{$i18n("button.light")}</span>
+    <span>{$message("button.light")}</span>
   {:else}
     <img src={moon} alt="Moon" />
-    <span>{$i18n("button.dark")}</span>
+    <span>{$message("button.dark")}</span>
   {/if}
 </button>
