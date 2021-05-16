@@ -3,8 +3,8 @@
 </script>
 
 <script lang="ts">
-  import AnimationView from '$lib/AnimationView/index.svelte';
-	import CanvasView from '$lib/CanvasView/index.svelte';
+  import Animation from '$lib/components/Animation/index.svelte';
+	import Canvas from '$lib/components/Canvas/index.svelte';
 	import PlayButton from "$lib/components/PlayButton/index.svelte";
   import ThemeButton from "$lib/components/ThemeButton/index.svelte";
   import EditButton from "$lib/components/EditButton/index.svelte";
@@ -39,13 +39,13 @@
 </header>
 
 <main>
-	<CanvasView
+	<Canvas
 		hidden={isPlaying}
 		eraser={isEraserMode}
 		on:export={(event) => (image = event.detail.toDataURL())}
 	/>
 	{#if isPlaying}
-		<AnimationView {image} dark={isDarkTheme} />
+		<Animation {image} dark={isDarkTheme} />
 	{/if}
 </main>
 
