@@ -1,12 +1,14 @@
 <script lang="ts">
   import { message } from "$lib/i18n";
-  import downloadIcon from "./download.svg";
+  import startIcon from "./log-in.svg";
 </script>
 
-<button >
-  <img src={downloadIcon} alt="Install" />
-  <span>{$message("button.install")}</span>
-</button>
+<a sveltekit:prefetch href="/sketch">
+  <button>
+    <img src={startIcon} alt="Start" />
+    <span>{$message("button.start")}</span>
+  </button>
+</a>
 
 <style>
   button {

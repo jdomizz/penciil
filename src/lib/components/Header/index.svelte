@@ -14,7 +14,7 @@
     <a sveltekit:prefetch href="/">Penciil</a>
   </div>
   <div class="toolbar">
-    <CreateButton />
+    <!-- <CreateButton /> -->
     <!-- <OpenButton /> -->
     <!-- <SaveButton />
     <ClearButton />

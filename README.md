@@ -1,38 +1,30 @@
-# create-svelte
+![logo](static/pwa-192x192.png)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+# Penciil
 
-## Creating a project
+<!-- [![Netlify Status](https://api.netlify.com/api/v1/badges/9846024d-ea59-46cc-9a63-2ae9bef96816/deploy-status)](https://app.netlify.com/sites/penciil/deploys) -->
 
-If you're seeing this, you've probably already done this step. Congrats!
+## About
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+Penciil is a straightforward ASCII art sketchpad that generates ASCII art animations from your drawings.
 
-# create a new project in my-app
-npm init svelte@next my-app
-```
+You can use it online or install it from [penciil.domi.land](https://penciil.domi.land/).
 
-> Note: the `@next` is temporary
+## Usage
 
-## Developing
+To draw or erase on the canvas use the mouse (on a computer) or your finger (on a mobile device). When you are done press the play button to generate the animation.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Development
 
-```bash
-npm run dev
+The app is built using [TypeScript](https://www.typescriptlang.org/) with [SvelteKit](https://kit.svelte.dev/).
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+The following `npm` scripts are available:
 
-## Building
+- `start`: runs the app for development, reloading on file changes
+- `build`: builds the app and outputs it in the `public/build` directory
+- `serve`: serves the `public` directory for localhost requests
+- `validate`: provides diagnostics checks for unused css, a11y hints and js/ts compiler errors
 
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
+## Credits
 
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+The icons are by [Feather](https://feathericons.com/) icons.
