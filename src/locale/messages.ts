@@ -12,6 +12,7 @@ export default {
       new: 'New',
       clear: 'Clear',
       open: 'Open',
+      install: 'Install',
     }
   },
   es: {
@@ -27,6 +28,7 @@ export default {
       new: 'Nuevo',
       clear: 'Limpiar',
       open: 'Abrir',
+      install: 'Instalar',
     }
   }
 };

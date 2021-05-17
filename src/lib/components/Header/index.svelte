@@ -16,11 +16,11 @@
   <div class="toolbar">
     <CreateButton />
     <OpenButton />
-    <SaveButton />
+    <!-- <SaveButton />
     <ClearButton />
     <EditButton />
     <PlayButton />
-    <ThemeButton />
+    <ThemeButton /> -->
   </div>
   <HelpButton />
 </header>
