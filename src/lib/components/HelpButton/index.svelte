@@ -3,9 +3,9 @@
   import helpIcon from "./help-circle.svg";
 </script>
 
-<a sveltekit:prefetch href="/about">
+<a sveltekit:prefetch href="/help">
   <button>
-    <img src={helpIcon} alt="About" />
+    <img src={helpIcon} alt="Help" />
     <span>{$message("button.help")}</span>
   </button>
 </a>

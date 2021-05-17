@@ -15,7 +15,7 @@
   </div>
   <div class="toolbar">
     <CreateButton />
-    <OpenButton />
+    <!-- <OpenButton /> -->
     <!-- <SaveButton />
     <ClearButton />
     <EditButton />
@@ -27,6 +27,7 @@
 
 <style>
 	header {
+    z-index: 10;
 		position: fixed;
     width: 100%;
     height: 56px;

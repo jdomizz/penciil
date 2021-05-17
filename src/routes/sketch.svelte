@@ -17,7 +17,7 @@
 </script>
 
 <svelte:head>
-	<title>Penciil</title>
+	<title>Penciil - Sketch</title>
 </svelte:head>
 
 <Canvas
