@@ -8,6 +8,7 @@ export default {
       save: 'Save',
       light: 'Light',
       dark: 'Dark',
+      help: 'Help',
     }
   },
   es: {
@@ -17,8 +18,9 @@ export default {
       play: 'Iniciar',
       pause: 'Detener',
       save: 'Guardar',
-      light: 'Luminoso',
+      light: 'Claro',
       dark: 'Oscuro',
+      help: 'Ayuda',
     }
   }
 };
