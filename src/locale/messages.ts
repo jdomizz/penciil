@@ -9,6 +9,9 @@ export default {
       light: 'Light',
       dark: 'Dark',
       help: 'Help',
+      new: 'New',
+      clear: 'Clear',
+      open: 'Open',
     }
   },
   es: {
@@ -21,6 +24,9 @@ export default {
       light: 'Claro',
       dark: 'Oscuro',
       help: 'Ayuda',
+      new: 'Nuevo',
+      clear: 'Limpiar',
+      open: 'Abrir',
     }
   }
 };

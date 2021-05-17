@@ -1,24 +1,28 @@
 <script lang="ts">
-	import { page } from '$app/stores';
 	import PlayButton from "$lib/components/PlayButton/index.svelte";
   import ThemeButton from "$lib/components/ThemeButton/index.svelte";
+  import ClearButton from "$lib/components/ClearButton/index.svelte";
   import EditButton from "$lib/components/EditButton/index.svelte";
   import SaveButton from "$lib/components/SaveButton/index.svelte";
-  import AboutButton from "$lib/components/AboutButton/index.svelte";
+  import HelpButton from "$lib/components/HelpButton/index.svelte";
+  import CreateButton from "$lib/components/CreateButton/index.svelte";
+  import OpenButton from "$lib/components/OpenButton/index.svelte";
 </script>
 
 <header>
-	<div class="title" class:active={$page.path === '/'}>
+	<div class="title">
     <a sveltekit:prefetch href="/">Penciil</a>
   </div>
   <div class="toolbar">
-    <ThemeButton />
-    <EditButton />
+    <CreateButton />
+    <OpenButton />
     <SaveButton />
+    <ClearButton />
+    <EditButton />
     <PlayButton />
-    <AboutButton />
-    <!-- <li class:active={$page.path === '/sketches'}><a sveltekit:prefetch href="/sketches">Sketches</a></li> -->
+    <ThemeButton />
   </div>
+  <HelpButton />
 </header>
 
 <style>
