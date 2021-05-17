@@ -3,13 +3,13 @@
 </script>
 
 <script lang="ts">
-  import Animation from '$lib/components/Animation/index.svelte';
-	import Canvas from '$lib/components/Canvas/index.svelte';
+  import '../app.css';
+  import AnimationPage from '$lib/components/AnimationPage/index.svelte';
+	import CanvasPage from '$lib/components/CanvasPage/index.svelte';
 	import PlayButton from "$lib/components/PlayButton/index.svelte";
   import ThemeButton from "$lib/components/ThemeButton/index.svelte";
   import EditButton from "$lib/components/EditButton/index.svelte";
   import SaveButton from "$lib/components/SaveButton/index.svelte";
-	import '../app.css';
 
 	let isEraserMode = false;
   let isPlaying = false;
@@ -39,13 +39,13 @@
 </header>
 
 <main>
-	<Canvas
+	<CanvasPage
 		hidden={isPlaying}
 		eraser={isEraserMode}
 		on:export={(event) => (image = event.detail.toDataURL())}
 	/>
 	{#if isPlaying}
-		<Animation {image} dark={isDarkTheme} />
+		<AnimationPage {image} dark={isDarkTheme} />
 	{/if}
 </main>
 
