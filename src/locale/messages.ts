@@ -1,7 +1,7 @@
 export default {
   en: {
     app: {
-      description: 'generates ASCII art animations from your drawings',
+      description: 'generates ASCII animations from your drawings',
     },
     button: {
       draw: 'Draw',
@@ -17,8 +17,10 @@ export default {
       open: 'Open',
       install: 'Install',
       start: 'Start',
+      back: 'Go back',
     },
     help: {
+      title: 'Help',
       description: 'is a straightforward sketchpad that generates ASCII art animations from your drawings. You can use it online or install it.',
       usage: {
         title: 'Usage',
@@ -29,10 +31,13 @@ export default {
         description: 'Crafted with ♥ in',
       },
     },
+    sketch: {
+      title: 'Sketch',
+    }
   },
   es: {
     app: {
-      description: 'genera animaciones de arte ASCII a partir de tus dibujos',
+      description: 'genera animaciones ASCII a partir de tus dibujos',
     },
     button: {
       draw: 'Dibujar',
@@ -48,8 +53,10 @@ export default {
       open: 'Abrir',
       install: 'Instalar',
       start: 'Empezar',
+      back: 'Volver',
     },
     help: {
+      title: 'Ayuda',
       description: 'es un sencillo bloc de dibujo que genera animaciones de arte ASCII a partir de tus dibujos. Puedes utilizarlo en línea o instalarlo.',
       usage: {
         title: 'Uso',
@@ -60,5 +67,8 @@ export default {
         description: 'Elaborada con ♥ en',
       },
     },
+    sketch: {
+      title: 'Boceto',
+    }
   }
 };

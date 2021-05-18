@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-	<title>Penciil - Help</title>
+	<title>Penciil - {$message("help.title")}</title>
 </svelte:head>
 
 <section>
@@ -24,10 +24,19 @@
   <div>
     <InstallButton />
   </div>
-  <h3>{$message("help.usage.title")}</h3>
-  <p>{$message("help.usage.description")}</p>
-  <h3>{$message("help.credits.title")}</h3>
-  <p>{$message("help.credits.description")} <a href="https://domi.land/">domi.land</a>.</p>
+  <h3>
+    {$message("help.usage.title")}
+  </h3>
+  <p>
+    {$message("help.usage.description")}
+  </p>
+  <h3>
+    {$message("help.credits.title")}
+  </h3>
+  <p>
+    {$message("help.credits.description")} 
+    <a href="https://domi.land/">domi.land</a>.
+  </p>
   <div>
     <a href="https://github.com/jdomizz/penciil" target="_blank">
       <img src={githubIcon} alt="GitHub" />

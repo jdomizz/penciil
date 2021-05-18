@@ -3,6 +3,7 @@
 </script>
 
 <script lang="ts">
+	import { message } from "$lib/i18n";
   import Animation from '$lib/components/Animation/index.svelte';
 	import Canvas from '$lib/components/Canvas/index.svelte';
 
@@ -17,7 +18,7 @@
 </script>
 
 <svelte:head>
-	<title>Penciil - Sketch</title>
+	<title>Penciil - {$message("sketch.title")}</title>
 </svelte:head>
 
 <Canvas

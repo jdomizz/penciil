@@ -19,6 +19,7 @@
 
 <style>
   section {
+    margin-top: -2em;
     height: 100%;
     position: relative;
     display: flex;
@@ -26,14 +27,15 @@
     justify-content: center;
   }
   div {
-    margin: 32px 0;
     display: flex;
     justify-content: center;
   }
   p {
+    margin-top: 32px;
+    margin-bottom: 32px;
     margin-left: auto;
     margin-right: auto;
-    width: 32em;
+    width: 16em;
     text-align: center;
   }
 </style>
