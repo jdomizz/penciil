@@ -35,7 +35,7 @@
       <EditButton />
       <ClearButton />
       <SaveButton />
-      <!-- <ThemeButton /> -->
+      <ThemeButton />
     {/if}
   </div>
 </header>
