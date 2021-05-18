@@ -1,8 +1,7 @@
-
 <script lang="ts">
-    import { message } from "$lib/i18n";
-  	import Logo from '$lib/components/Logo/index.svelte';
-  	import StartButton from '$lib/components/StartButton/index.svelte';
+  import { message } from "$lib/i18n";
+  import Logo from '$lib/components/Logo/index.svelte';
+  import StartButton from '$lib/components/StartButton/index.svelte';
 </script>
 
 <section>
