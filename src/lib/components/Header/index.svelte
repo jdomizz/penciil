@@ -27,7 +27,7 @@
   </div>
   <div class="side">
     {#if $page.path === '/'}
-      <CreateButton />
+      <!-- <CreateButton /> -->
       <AboutButton />
     {/if}
     {#if $page.path === '/sketch'}
