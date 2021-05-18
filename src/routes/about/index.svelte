@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-	<title>Penciil - {$message("help.title")}</title>
+	<title>Penciil - {$message("about.title")}</title>
 </svelte:head>
 
 <section>
@@ -19,23 +19,14 @@
     <Logo />
   </div>
   <p>
-    <strong>Penciil</strong> {$message("help.description")}
+    <strong>Penciil</strong> {$message("about.description")}
   </p>
   <div>
     <InstallButton />
   </div>
-  <h3>
-    {$message("help.usage.title")}
-  </h3>
   <p>
-    {$message("help.usage.description")}
-  </p>
-  <h3>
-    {$message("help.credits.title")}
-  </h3>
-  <p>
-    {$message("help.credits.description")} 
-    <a href="https://domi.land/">domi.land</a>.
+    {$message("about.credits")} 
+    <a href="https://domi.land/">domi.land</a>
   </p>
   <div>
     <a href="https://github.com/jdomizz/penciil" target="_blank">
@@ -46,6 +37,7 @@
 
 <style>
   section {
+    margin-top: -2em;
     height: 100%;
     position: relative;
     display: flex;
@@ -53,14 +45,15 @@
     justify-content: center;
   }
   div {
-    margin: 32px 0;
     display: flex;
     justify-content: center;
   }
-  h3, p {
+  p {
+    margin-top: 32px;
+    margin-bottom: 32px;
     margin-left: auto;
     margin-right: auto;
-    width: 32em;
+    width: 16em;
     text-align: center;
   }
   a {
