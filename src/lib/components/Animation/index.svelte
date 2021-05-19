@@ -1,9 +1,9 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { themeMode } from "$lib/components/ThemeButton/themeMode";
   import { imageToAscii, updateAscii } from "./ascii";
 
   export let image = "";
-  export let dark = false;
 
   let ascii = "";
 
@@ -16,7 +16,7 @@
   });
 </script>
 
-<div class={dark ? "dark" : ""}>
+<div class={$themeMode ? "dark" : ""}>
   {ascii}
 </div>
 

@@ -1,16 +1,15 @@
 <script lang="ts">
   import { onMount, createEventDispatcher } from "svelte";
+  import { editMode } from "$lib/components/EditButton/editMode";
   import { Painter } from "./painter";
 
-  export let hidden = false;
-  export let eraser = true; // FIXME: ojo pq esto debería ser false
   const dispatch = createEventDispatcher();
 
   let canvas: HTMLCanvasElement;
   let painter: Painter;
 
   $: if (painter) {
-    painter.eraserMode = eraser;
+    painter.eraserMode = $editMode;
   }
 
   onMount(() => {
@@ -30,26 +29,20 @@
   }
 </script>
 
-<div class={hidden ? "hidden" : ""}>
-  <canvas
-    bind:this={canvas}
-    on:mousedown={() => (painter.brushEnabled = true)}
-    on:touchstart={() => (painter.brushEnabled = true)}
-    on:mousemove={paintCanvas}
-    on:touchmove={paintCanvas}
-    on:mouseup={exportCanvas}
-    on:touchend={exportCanvas}
-  />
-</div>
+<canvas
+  bind:this={canvas}
+  on:mousedown={() => (painter.brushEnabled = true)}
+  on:touchstart={() => (painter.brushEnabled = true)}
+  on:mousemove={paintCanvas}
+  on:touchmove={paintCanvas}
+  on:mouseup={exportCanvas}
+  on:touchend={exportCanvas}
+/>
 
 <style>
   canvas {
     width: 100%;
     height: 100%;
     cursor: pointer;
-  }
-
-  .hidden {
-    display: none;
   }
 </style>
