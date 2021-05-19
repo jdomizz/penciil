@@ -1,12 +1,10 @@
 <script lang="ts">
-  import { createEventDispatcher } from "svelte";
+  import { sketch } from "$lib/sketch";
   import { message } from "$lib/i18n";
-  import saveIcon from "./save.svg";
-
-  const dispatch = createEventDispatcher();
+  import SaveIcon from "./save.svelte";
 </script>
 
-<button disabled={true} on:click={() => dispatch("click")}>
-  <img src={saveIcon} alt="Save" />
+<button disabled={$sketch.image === null}>
+  <SaveIcon />
   <span>{$message("button.save")}</span>
 </button>

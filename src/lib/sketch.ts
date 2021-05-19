@@ -3,14 +3,15 @@ import type { Sketch } from '$lib/types';
 
 const emptySketch: Sketch = {
   id: null,
-  imageSrc: null,
+  image: null,
 };
 
 function createSketch() {
-	const { subscribe, set } = writable<Sketch>(emptySketch);
+	const { subscribe, set, update } = writable<Sketch>(emptySketch);
 
 	return {
 		subscribe,
+		update: (image) => update((sketch) => ({...sketch, image})),
 		reset: () => set(emptySketch)
 	};
 }

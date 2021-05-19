@@ -1,15 +1,14 @@
 <script lang="ts">
-  import { onMount, createEventDispatcher } from "svelte";
+  import { onMount } from "svelte";
+  import { sketch } from "$lib/sketch";
   import { editMode } from "$lib/components/EditButton/editMode";
   import { Painter } from "./painter";
-
-  const dispatch = createEventDispatcher();
 
   let canvas: HTMLCanvasElement;
   let painter: Painter;
 
   $: if (painter) {
-    painter.eraserMode = $editMode;
+    painter.eraser = $editMode;
   }
 
   onMount(() => {
@@ -19,22 +18,17 @@
   });
 
   function exportCanvas() {
-    painter.brushEnabled = false;
-    dispatch("export", canvas);
-  }
-
-  function paintCanvas(event: MouseEvent | TouchEvent) {
-    event.preventDefault();
-    painter.paint(event);
+    painter.enabled = false;
+    sketch.update(canvas.toDataURL());
   }
 </script>
 
 <canvas
   bind:this={canvas}
-  on:mousedown={() => (painter.brushEnabled = true)}
-  on:touchstart={() => (painter.brushEnabled = true)}
-  on:mousemove={paintCanvas}
-  on:touchmove={paintCanvas}
+  on:mousedown={() => painter.enabled = true}
+  on:touchstart={() => painter.enabled = true}
+  on:mousemove|preventDefault={(event) => painter.paint(event)}
+  on:touchmove|preventDefault={(event) => painter.paint(event)}
   on:mouseup={exportCanvas}
   on:touchend={exportCanvas}
 />

@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { message } from "$lib/i18n";
+	import { playMode } from "$lib/components/PlayButton/playMode";
 	import PlayButton from "$lib/components/PlayButton/index.svelte";
   import ThemeButton from "$lib/components/ThemeButton/index.svelte";
   import ClearButton from "$lib/components/ClearButton/index.svelte";
@@ -31,11 +32,14 @@
       <AboutButton />
     {/if}
     {#if $page.path === '/sketch'}
+      {#if $playMode}
+        <ThemeButton />
+      {:else}
+        <EditButton />
+        <ClearButton />
+        <SaveButton />
+      {/if}
       <PlayButton />
-      <EditButton />
-      <ClearButton />
-      <SaveButton />
-      <ThemeButton />
     {/if}
   </div>
 </header>

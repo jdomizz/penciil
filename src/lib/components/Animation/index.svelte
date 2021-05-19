@@ -1,13 +1,12 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { sketch } from "$lib/sketch";
   import { themeMode } from "$lib/components/ThemeButton/themeMode";
   import { imageToAscii, updateAscii } from "./ascii";
 
-  export let image = "";
-
   let ascii = "";
 
-  $: (async () => (ascii = await imageToAscii(image)))();
+  $: (async () => (ascii = await imageToAscii($sketch.image)))();
 
   onMount(() => {
     setInterval(() => {

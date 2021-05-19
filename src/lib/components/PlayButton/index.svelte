@@ -1,16 +1,17 @@
 <script lang="ts">
   import { message } from "$lib/i18n";
+  import { sketch } from "$lib/sketch";
   import { playMode } from "./playMode";
-	import pauseIcon from './pause.svg';
-	import playIcon from './play.svg';
+	import PauseIcon from './pause.svelte';
+	import PlayIcon from './play.svelte';
 </script>
 
-<button class="border" on:click={playMode.toogle}>
+<button disabled={$sketch.image === null} class="border" on:click={playMode.toogle}>
   {#if $playMode}
-    <img src={pauseIcon} alt="Pause" />
+    <PauseIcon/>
     <span>{$message("button.pause")}</span>
   {:else}
-    <img src={playIcon} alt="Play" />
+    <PlayIcon/>
     <span>{$message("button.play")}</span>
   {/if}
 </button>

@@ -1,6 +1,6 @@
 export class Painter {
   private context: CanvasRenderingContext2D;
-  private isBrushEnabled: boolean;
+  private isEnabled: boolean;
 
   private static getOffsetX(event: MouseEvent | TouchEvent): number {
     return event instanceof TouchEvent
@@ -24,7 +24,7 @@ export class Painter {
   }
 
   paint(event: MouseEvent | TouchEvent): void {
-    if (this.brushEnabled) {
+    if (this.isEnabled) {
       const offsetX = Painter.getOffsetX(event);
       const offsetY = Painter.getOffsetY(event);
       this.context.beginPath();
@@ -34,15 +34,15 @@ export class Painter {
     }
   }
 
-  set brushEnabled(value: boolean) {
-    this.isBrushEnabled = value;
+  set enabled(value: boolean) {
+    this.isEnabled = value;
   }
 
-  get brushEnabled(): boolean {
-    return this.isBrushEnabled;
+  get enabled(): boolean {
+    return this.isEnabled;
   }
 
-  set eraserMode(value: boolean) {
+  set eraser(value: boolean) {
     this.context.strokeStyle = value ? "white" : "black";
   }
 }

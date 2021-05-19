@@ -1,9 +1,10 @@
 <script lang="ts">
+  import { sketch } from "$lib/sketch";
   import { message } from "$lib/i18n";
-  import trashIcon from "./trash.svg";
+  import TrashIcon from "./trash.svelte";
 </script>
 
-<button>
-  <img src={trashIcon} alt="Clear" />
+<button disabled={$sketch.image === null}>
+  <TrashIcon/>
   <span>{$message("button.clear")}</span>
 </button>
