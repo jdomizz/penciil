@@ -4,11 +4,11 @@
 
 <script lang="ts">
 	import { message } from "$lib/i18n";
+	import { playMode } from "$lib/components/PlayButton/playMode";
   import Animation from '$lib/components/Animation/index.svelte';
 	import Canvas from '$lib/components/Canvas/index.svelte';
 
 	let isEraserMode = false;
-  let isPlaying = false;
   let isDarkTheme = false;
   let image: string;
 
@@ -22,11 +22,11 @@
 </svelte:head>
 
 <Canvas
-	hidden={isPlaying}
+	hidden={$playMode}
 	eraser={isEraserMode}
 	on:export={(event) => (image = event.detail.toDataURL())}
 />
-{#if isPlaying}
+{#if $playMode}
 	<Animation {image} dark={isDarkTheme} />
 {/if}
 

@@ -1,12 +1,12 @@
 <script lang="ts">
   import { message } from "$lib/i18n";
-  import { theme } from "./theme";
+  import { themeMode } from "./themeMode";
   import moonIcon from "./moon.svg";
   import sunIcon from "./sun.svg";
 </script>
 
-<button on:click={theme.toogle}>
-  {#if $theme}
+<button on:click={themeMode.toogle}>
+  {#if $themeMode}
     <img src={sunIcon} alt="Sun" />
     <span>{$message("button.light")}</span>
   {:else}

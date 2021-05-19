@@ -1,20 +1,12 @@
 <script lang="ts">
-  import { createEventDispatcher } from "svelte";
   import { message } from "$lib/i18n";
+  import { playMode } from "./playMode";
 	import pauseIcon from './pause.svg';
 	import playIcon from './play.svg';
-
-  let isPlaying = false;
-  const dispatch = createEventDispatcher();
-
-  function toogle() {
-    isPlaying = !isPlaying;
-    dispatch("toogle", isPlaying);
-  }
 </script>
 
-<button class="border" on:click={toogle}>
-  {#if isPlaying}
+<button class="border" on:click={playMode.toogle}>
+  {#if $playMode}
     <img src={pauseIcon} alt="Pause" />
     <span>{$message("button.pause")}</span>
   {:else}

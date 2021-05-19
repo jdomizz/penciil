@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 
-function createTheme() {
+function createPlayMode() {
 	const { subscribe, set, update } = writable(false);
 
 	return {
@@ -10,4 +10,4 @@ function createTheme() {
 	};
 }
 
-export const theme = createTheme();
+export const playMode = createPlayMode();
