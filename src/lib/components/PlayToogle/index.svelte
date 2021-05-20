@@ -6,7 +6,7 @@
 	import PlayIcon from './play.svelte';
 </script>
 
-<button disabled={$sketch.image === null} class="border" on:click={playMode.toogle}>
+<button disabled={$sketch.image === null} on:click={playMode.toogle}>
   {#if $playMode}
     <PauseIcon/>
     <span>{$message("button.pause")}</span>
@@ -25,7 +25,7 @@
   }
 
   button:disabled {
-    background-color: white;
+    background-color: #dddddd;
     border: none;
   }
 

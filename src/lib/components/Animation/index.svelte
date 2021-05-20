@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { sketch } from "$lib/sketch";
-  import { themeMode } from "$lib/components/ThemeButton/themeMode";
+  import { themeMode } from "$lib/components/ThemeSwitch/themeMode";
   import { imageToAscii, updateAscii } from "./ascii";
 
   let ascii = "";

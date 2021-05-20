@@ -4,7 +4,7 @@
 
 <script lang="ts">
 	import { message } from "$lib/i18n";
-	import { playMode } from "$lib/components/PlayButton/playMode";
+	import { playMode } from "$lib/components/PlayToogle/playMode";
   import Animation from '$lib/components/Animation/index.svelte';
 	import Canvas from '$lib/components/Canvas/index.svelte';
 </script>
