@@ -5,7 +5,7 @@
 	import PlayButton from "$lib/components/PlayButton/index.svelte";
   import ThemeButton from "$lib/components/ThemeButton/index.svelte";
   import ClearButton from "$lib/components/ClearButton/index.svelte";
-  import EditButton from "$lib/components/EditButton/index.svelte";
+  import EditButtonGroup from "$lib/components/EditButtonGroup/index.svelte";
   import SaveButton from "$lib/components/SaveButton/index.svelte";
   import AboutButton from "$lib/components/AboutButton/index.svelte";
   import CreateButton from "$lib/components/CreateButton/index.svelte";
@@ -35,7 +35,7 @@
       {#if $playMode}
         <ThemeButton />
       {:else}
-        <EditButton />
+        <EditButtonGroup />
         <ClearButton />
         <SaveButton />
       {/if}

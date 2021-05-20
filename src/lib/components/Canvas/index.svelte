@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { sketch } from "$lib/sketch";
-  import { editMode } from "$lib/components/EditButton/editMode";
+  import { editMode } from "$lib/components/EditButtonGroup/editMode";
   import { Painter } from "./painter";
 
   let canvas: HTMLCanvasElement;

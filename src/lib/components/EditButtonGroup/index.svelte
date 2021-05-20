@@ -1,7 +1,7 @@
 <script lang="ts">
   import { message } from "$lib/i18n";
-  import { editMode } from "./editMode";
-	import editIcon from './edit.svg';
+  import { editMode } from './editMode'; 
+  import editIcon from './edit.svg';
 	import eraserIcon from './eraser.svg';
 </script>
 
