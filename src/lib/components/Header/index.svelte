@@ -17,14 +17,13 @@
     {#if $page.path !== '/'}
       <BackButton />
     {/if}
+
     {#if $page.path === '/'}
       <span class="title">Penciil</span>
     {/if}
     {#if $page.path === '/about'}
       <span class="title">{$message("about.title")}</span>
     {/if}
-
-    
   </div>
   <div class="side">
     {#if $page.path === '/'}
@@ -34,10 +33,6 @@
     {#if $page.path === '/sketch'}
       {#if $playMode}
         <ThemeButton />
-      {:else}
-        <EditButtonGroup />
-        <ClearButton />
-        <SaveButton />
       {/if}
       <PlayButton />
     {/if}

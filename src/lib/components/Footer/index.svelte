@@ -1,0 +1,31 @@
+<script lang="ts">
+  import { playMode } from "$lib/components/PlayToogle/playMode";
+  import ClearButton from "$lib/components/ClearButton/index.svelte";
+  import EditButtonGroup from "$lib/components/EditButtonGroup/index.svelte";
+  import SaveButton from "$lib/components/SaveButton/index.svelte";
+</script>
+
+<footer>
+  <SaveButton />
+  {#if !$playMode}
+    <EditButtonGroup />
+  {/if}  
+  <ClearButton />
+</footer>
+
+<style>
+	footer {
+    z-index: 10;
+		position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 56px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+    align-content: center;
+		background-color: white;
+    box-shadow: 1px 0 4px 0 rgb(0 0 0 / 20%), 1px 0 1px 0 rgb(0 0 0 / 14%),
+      1px 0 1px 0 rgb(0 0 0 / 12%);
+	}
+</style>
