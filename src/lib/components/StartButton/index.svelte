@@ -12,10 +12,10 @@
 
 <style>
   button {
-    padding: 2px;
-    border: 2px;
+    padding: 4px;
+    border: 1px;
     border-style: solid;
-    border-radius: 10%;
+    border-radius: 5%;
     background-color: black;
   }
   span {

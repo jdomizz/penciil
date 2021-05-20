@@ -18,9 +18,22 @@
 
 <style>
   button {
-    padding: 2px;
-    border: 2px;
-    border-style: solid;
-    border-radius: 10%;
+    padding: 4px;
+    border: 1px solid black;
+    border-radius: 5%;
+    background-color: black;
+  }
+
+  button:disabled {
+    background-color: white;
+    border: none;
+  }
+
+  button > span {
+    color: white;
+  }
+
+  button:disabled > span {
+    color: #cccccc;
   }
 </style>

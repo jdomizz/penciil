@@ -5,12 +5,37 @@
 	import eraserIcon from './eraser.svg';
 </script>
 
-<button on:click={editMode.toogle}>
-  {#if $editMode}
+<div>
+  <button disabled={!$editMode} on:click={editMode.toogle}>
     <img src={editIcon} alt="Draw" />
     <span>{$message("button.draw")}</span>
-  {:else}
+  </button>
+  <button disabled={$editMode} on:click={editMode.toogle}>
     <img src={eraserIcon} alt="Erase" />
     <span>{$message("button.erase")}</span>
-  {/if}
-</button>
+  </button>
+</div>
+
+<style>
+  div {
+    display: flex;
+    border: 1px solid #cccccc;
+    border-radius: 4%;
+  }
+  button {
+    float: left;
+    padding: 4px;
+    margin: 0 !important;
+  }
+
+  button:disabled {
+    background-color: #eeeeee;
+  }
+
+  button:disabled > span {
+    color: black;
+  }
+  button:not(:last-child) {
+    border-right: none;
+  }
+</style>

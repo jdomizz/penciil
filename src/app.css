@@ -44,6 +44,10 @@ button:hover {
 	cursor: pointer;
 }
 
+button:disabled {
+	cursor: default;
+}
+
 button:disabled > svg {
-	stroke: gray;
+	stroke: #cccccc;
 }
