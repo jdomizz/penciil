@@ -2,7 +2,7 @@
 
 # Penciil
 
-<!-- [![Netlify Status](https://api.netlify.com/api/v1/badges/9846024d-ea59-46cc-9a63-2ae9bef96816/deploy-status)](https://app.netlify.com/sites/penciil/deploys) -->
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7b166d6a-832b-472f-b463-35dc8d680957/deploy-status)](https://app.netlify.com/sites/domilandtest/deploys)
 
 ## About
 

@@ -3,7 +3,7 @@
   import moonIcon from "./moon.svg";
 </script>
 
-<label class="switchBtn">
+<label class="switch">
   <input type="checkbox" on:click={themeMode.toogle}>
   <div class="slide round">
     <img src={moonIcon} alt="Moon" />
@@ -11,13 +11,14 @@
 </label>
 
 <style>
-.switchBtn {
+.switch {
   position: relative;
   display: inline-block;
   width: 70px;
   height: 34px;
+  margin-right: 4px;
 }
-.switchBtn input {
+.switch input {
   display:none;
 }
 .slide {

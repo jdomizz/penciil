@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { playMode } from "$lib/components/PlayToogle/playMode";
+  import { playMode } from "$lib/components/PlayButton/playMode";
   import ClearButton from "$lib/components/ClearButton/index.svelte";
   import EditButtonGroup from "$lib/components/EditButtonGroup/index.svelte";
   import SaveButton from "$lib/components/SaveButton/index.svelte";

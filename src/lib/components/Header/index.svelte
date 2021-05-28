@@ -1,8 +1,8 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { message } from "$lib/i18n";
-	import { playMode } from "$lib/components/PlayToogle/playMode";
-	import PlayButton from "$lib/components/PlayToogle/index.svelte";
+	import { playMode } from "$lib/components/PlayButton/playMode";
+	import PlayButton from "$lib/components/PlayButton/index.svelte";
   import ThemeButton from "$lib/components/ThemeSwitch/index.svelte";
   import ClearButton from "$lib/components/ClearButton/index.svelte";
   import EditButtonGroup from "$lib/components/EditButtonGroup/index.svelte";
@@ -33,8 +33,9 @@
     {#if $page.path === '/sketch'}
       {#if $playMode}
         <ThemeButton />
-      {/if}
+      {:else}
       <PlayButton />
+      {/if}
     {/if}
   </div>
 </header>
