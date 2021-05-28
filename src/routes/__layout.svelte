@@ -5,10 +5,6 @@
 	import '../app.css';
 </script>
 
-<svelte:head>
-	<title>Penciil</title>
-</svelte:head>
-
 <Header />
 <main>
 	<slot />
