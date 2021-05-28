@@ -1,12 +1,9 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { message } from "$lib/i18n";
+  import { title } from "$lib/title";
 	import { playMode } from "$lib/components/PlayButton/playMode";
 	import PlayButton from "$lib/components/PlayButton/index.svelte";
   import ThemeButton from "$lib/components/ThemeSwitch/index.svelte";
-  import ClearButton from "$lib/components/ClearButton/index.svelte";
-  import EditButtonGroup from "$lib/components/EditButtonGroup/index.svelte";
-  import SaveButton from "$lib/components/SaveButton/index.svelte";
   import AboutButton from "$lib/components/AboutButton/index.svelte";
   import CreateButton from "$lib/components/CreateButton/index.svelte";
   import BackButton from "$lib/components/BackButton/index.svelte";
@@ -17,17 +14,11 @@
     {#if $page.path !== '/'}
       <BackButton />
     {/if}
-
-    {#if $page.path === '/'}
-      <span class="title">Penciil</span>
-    {/if}
-    {#if $page.path === '/about'}
-      <span class="title">{$message("about.title")}</span>
-    {/if}
+    <span class="title">{$title}</span>
   </div>
   <div class="side">
     {#if $page.path === '/'}
-      <!-- <CreateButton /> -->
+      <CreateButton />
       <AboutButton />
     {/if}
     {#if $page.path === '/sketch'}

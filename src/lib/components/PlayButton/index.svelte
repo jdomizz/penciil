@@ -26,5 +26,4 @@
   button > span {
     color: white;
   }
-
 </style>

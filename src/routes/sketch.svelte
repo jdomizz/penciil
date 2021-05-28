@@ -3,14 +3,14 @@
 </script>
 
 <script lang="ts">
-	import { message } from "$lib/i18n";
+	import { title } from "$lib/title";
 	import { playMode } from "$lib/components/PlayButton/playMode";
   import Animation from '$lib/components/Animation/index.svelte';
 	import Canvas from '$lib/components/Canvas/index.svelte';
 </script>
 
 <svelte:head>
-	<title>Penciil - {$message("sketch.title")}</title>
+	<title>Penciil - {$title}</title>
 </svelte:head>
 
 <div class={$playMode ? "hidden" : ""}>

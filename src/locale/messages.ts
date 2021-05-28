@@ -5,7 +5,11 @@ export default {
       description: 'is a straightforward sketchpad that generates ASCII art animations from your sketches. You can use it online or install it.',
       credits: 'Crafted with ♥ in',
     },
+    animation: {
+      title: 'Animation',
+    },
     app: {
+      name: 'Penciil',
       description: 'generates ASCII animations from your drawings',
     },
     button: {
@@ -33,7 +37,11 @@ export default {
       description: 'es un bloc de dibujo sencillo que genera animaciones ASCII a partir de tus bocetos. Puedes utilizarlo en línea o instalarlo.',
       credits: 'Elaborada con ♥ en',
     },
+    animation: {
+      title: 'Animación',
+    },
     app: {
+      name: 'Penciil',
       description: 'genera animaciones ASCII a partir de tus dibujos',
     },
     button: {

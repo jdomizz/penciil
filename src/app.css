@@ -30,6 +30,7 @@ button {
 	align-items: center;
 	justify-content: center;
 	margin: 0 4px;
+	padding: 4px;
 }
 
 button > svg {
