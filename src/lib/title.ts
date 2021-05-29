@@ -8,20 +8,10 @@ export const title = derived([page, playMode, message], ([$page, $playMode, $mes
   return $message(i18nKey);
 });
 
-// export const message = derived(translations, ($translations) => {
-//   return (key: string) => getMessage(key, $translations);
-// });
-
-// const getMessage = (key: string, translations: Record<string,unknown>) => {
-//   return key
-//     .split('.')
-//     .reduce((accumulator, item) => accumulator[item], {...translations}) as string;
-// };
-
-  const getTitleKey = (path: string, playMode: boolean): string =>  {
-    switch (path) {
-      case '/sketch': return playMode ? 'animation.title' : 'sketch.title';
-      case '/about': return 'about.title';
-      default: return 'app.name';
-    }
+const getTitleKey = (path: string, playMode: boolean): string =>  {
+  switch (path) {
+    case '/sketch': return playMode ? 'animation.title' : 'sketch.title';
+    case '/about': return 'about.title';
+    default: return 'app.name';
   }
+}
