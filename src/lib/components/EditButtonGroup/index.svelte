@@ -19,21 +19,21 @@
 <style>
   div {
     display: flex;
-    border: 1px solid #cccccc;
-    border-radius: 4%;
+    height: 56px;
   }
   button {
     float: left;
     padding: 4px;
     margin: 0 !important;
+    background-color: #dddddd;
   }
 
   button:disabled {
-    background-color: #eeeeee;
+    background-color: black;
   }
 
-  button:disabled > span {
-    color: black;
+  button > span {
+    color: white;
   }
   button:not(:last-child) {
     border-right: none;

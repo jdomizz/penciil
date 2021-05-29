@@ -12,9 +12,7 @@
 
 <style>
   button {
-    margin: 4px;
-    border: 1px solid black;
-    border-radius: 5%;
+    height: 56px;
     background-color: black;
   }
 

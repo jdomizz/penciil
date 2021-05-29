@@ -1,7 +1,7 @@
 import { writable, derived } from 'svelte/store';
 import messagesFile from "../locale/messages";
 
-export const locale = writable('es');
+export const locale = writable('en');
 
 export const messages = writable<Record<string,Record<string,unknown>>>(messagesFile);
 

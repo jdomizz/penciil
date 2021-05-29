@@ -6,11 +6,15 @@
 </script>
 
 <footer>
-  <SaveButton />
-  {#if !$playMode}
-    <EditButtonGroup />
-  {/if}  
-  <ClearButton />
+  <div class="side">
+    {#if !$playMode}
+      <EditButtonGroup />
+    {/if}
+  </div>
+  <div class="side"> 
+    <SaveButton />
+    <ClearButton />
+  </div>
 </footer>
 
 <style>
@@ -21,11 +25,15 @@
     width: 100%;
     height: 56px;
 		display: flex;
-		justify-content: center;
+    justify-content: space-between;
 		align-items: center;
     align-content: center;
 		background-color: white;
     box-shadow: 1px 0 4px 0 rgb(0 0 0 / 20%), 1px 0 1px 0 rgb(0 0 0 / 14%),
       1px 0 1px 0 rgb(0 0 0 / 12%);
 	}
+  .side {
+    display: flex;
+    align-items: center;
+  }
 </style>

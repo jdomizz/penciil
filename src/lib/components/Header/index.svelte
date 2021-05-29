@@ -7,6 +7,7 @@
   import AboutButton from "$lib/components/AboutButton/index.svelte";
   import CreateButton from "$lib/components/CreateButton/index.svelte";
   import BackButton from "$lib/components/BackButton/index.svelte";
+  import LanguageSelect from "$lib/components/LanguageSelect/index.svelte";
 </script>
 
 <header>
@@ -18,7 +19,8 @@
   </div>
   <div class="side">
     {#if $page.path === '/'}
-      <CreateButton />
+      <!-- <CreateButton /> -->
+      <LanguageSelect />
       <AboutButton />
     {/if}
     {#if $page.path === '/sketch'}
