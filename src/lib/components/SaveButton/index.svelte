@@ -4,7 +4,7 @@
   import SaveIcon from "./save.svelte";
 </script>
 
-<button disabled={$sketch.image === null}>
+<button disabled={true}>
   <SaveIcon />
   <span>{$message("button.save")}</span>
 </button>

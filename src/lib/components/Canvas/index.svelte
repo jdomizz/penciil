@@ -1,14 +1,13 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { sketch } from "$lib/sketch";
-  import { editMode } from "$lib/components/EditButtonGroup/editMode";
   import { Painter } from "./painter";
 
   let canvas: HTMLCanvasElement;
   let painter: Painter;
 
   $: if (painter) {
-    painter.eraser = $editMode;
+    painter.eraser = $sketch.eraserMode;
   }
 
   onMount(() => {
@@ -19,7 +18,7 @@
 
   function exportCanvas() {
     painter.enabled = false;
-    sketch.update(canvas.toDataURL());
+    sketch.updateImage(canvas.toDataURL());
   }
 </script>
 

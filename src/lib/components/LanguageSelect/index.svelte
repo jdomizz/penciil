@@ -11,3 +11,13 @@
     </option>
   {/each}
 </select>
+
+
+<style>
+  select {
+    border: none;
+    margin-right: 4px;
+    background-color: white;
+  }
+</style>
+

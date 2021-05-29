@@ -57,7 +57,7 @@ export default {
       clear: 'Descartar',
       open: 'Abrir',
       install: 'Instalar',
-      start: 'Empezar',
+      start: 'Comenzar',
     },
     sketch: {
       title: 'Boceto',

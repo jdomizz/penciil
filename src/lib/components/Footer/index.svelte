@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { playMode } from "$lib/components/PlayButton/playMode";
+  import { sketch } from "$lib/sketch";
   import ClearButton from "$lib/components/ClearButton/index.svelte";
   import EditButtonGroup from "$lib/components/EditButtonGroup/index.svelte";
   import SaveButton from "$lib/components/SaveButton/index.svelte";
@@ -7,13 +7,13 @@
 
 <footer>
   <div class="side">
-    {#if !$playMode}
+    {#if !$sketch.animationRunning}
       <EditButtonGroup />
     {/if}
   </div>
   <div class="side"> 
-    <SaveButton />
     <ClearButton />
+    <SaveButton />
   </div>
 </footer>
 

@@ -4,7 +4,7 @@
 
 <script lang="ts">
 	import { title } from "$lib/title";
-	import { playMode } from "$lib/components/PlayButton/playMode";
+	import { sketch } from "$lib/sketch";
   import Animation from '$lib/components/Animation/index.svelte';
 	import Canvas from '$lib/components/Canvas/index.svelte';
 </script>
@@ -13,10 +13,10 @@
 	<title>Penciil - {$title}</title>
 </svelte:head>
 
-<div class={$playMode ? "hidden" : ""}>
+<div class={$sketch.animationRunning ? "hidden" : ""}>
 	<Canvas/>
 </div>
-{#if $playMode}
+{#if $sketch.animationRunning}
 	<Animation/>
 {/if}
 

@@ -1,18 +1,16 @@
 <script lang="ts">
   import { message } from "$lib/i18n";
   import { sketch } from "$lib/sketch";
-  import { playMode } from "./playMode";
 	import playIcon from './play.svg';
 </script>
 
-<button disabled={$sketch.image === null} on:click={playMode.toogle}>
+<button disabled={$sketch.image === null} on:click={sketch.toogleAnimation}>
   <img src={playIcon} alt="Play" />
   <span>{$message("button.play")}</span>
 </button>
 
 <style>
   button {
-    height: 56px;
     background-color: black;
   }
 

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { title } from "$lib/title";
-	import { playMode } from "$lib/components/PlayButton/playMode";
+  import { sketch } from "$lib/sketch";
 	import PlayButton from "$lib/components/PlayButton/index.svelte";
   import ThemeButton from "$lib/components/ThemeSwitch/index.svelte";
   import AboutButton from "$lib/components/AboutButton/index.svelte";
@@ -20,11 +20,11 @@
   <div class="side">
     {#if $page.path === '/'}
       <!-- <CreateButton /> -->
-      <LanguageSelect />
       <AboutButton />
+      <LanguageSelect />
     {/if}
     {#if $page.path === '/sketch'}
-      {#if $playMode}
+      {#if $sketch.animationRunning}
         <ThemeButton />
       {:else}
       <PlayButton />

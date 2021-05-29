@@ -1,11 +1,12 @@
 <script lang="ts">
-  import { playMode } from "$lib/components/PlayButton/playMode";
+  import { sketch } from "$lib/sketch";
   import backIcon from "./arrow-left.svg";
 
   function goBack(): void {
-    if ($playMode) {
-      playMode.toogle();
+    if ($sketch.animationRunning) {
+      sketch.toogleAnimation();
     } else {
+      sketch.reset();
       window.history.back();
     }
   }

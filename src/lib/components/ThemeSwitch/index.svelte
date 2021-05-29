@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { themeMode } from "./themeMode";
+  import { sketch } from "$lib/sketch";
   import moonIcon from "./moon.svg";
 </script>
 
 <label class="switch">
-  <input type="checkbox" on:click={themeMode.toogle}>
+  <input type="checkbox" on:click={sketch.toogleTheme}>
   <div class="slide round">
     <img src={moonIcon} alt="Moon" />
   </div>
