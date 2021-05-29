@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { sketch } from "$lib/sketch";
+  import { sketch } from "$lib/stores/sketch";
   import backIcon from "./arrow-left.svg";
 
   function goBack(): void {

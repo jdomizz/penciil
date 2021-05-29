@@ -3,8 +3,8 @@
 </script>
 
 <script lang="ts">
-	import { title } from "$lib/title";
-	import { sketch } from "$lib/sketch";
+	import { title } from "$lib/stores/title";
+	import { sketch } from "$lib/stores/sketch";
   import Animation from '$lib/components/Animation/index.svelte';
 	import Canvas from '$lib/components/Canvas/index.svelte';
 </script>

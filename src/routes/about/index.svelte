@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-  import { message } from "$lib/i18n";
+  import { message } from "$lib/stores/i18n";
   import Logo from '$lib/components/Logo/index.svelte';
   import InstallButton from "$lib/components/InstallButton/index.svelte";
   import githubIcon from './github.svg';

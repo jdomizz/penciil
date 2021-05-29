@@ -1,5 +1,5 @@
 import { writable, derived } from 'svelte/store';
-import messagesFile from "../locale/messages";
+import messagesFile from "../../locale/messages";
 
 export const locale = writable('en');
 

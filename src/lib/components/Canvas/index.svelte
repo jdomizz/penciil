@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { sketch } from "$lib/sketch";
-  import { Painter } from "./painter";
+  import { sketch } from "$lib/stores/sketch";
+  import { Painter } from "$lib/utils/painter";
 
   let canvas: HTMLCanvasElement;
   let painter: Painter;

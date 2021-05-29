@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { sketch } from "$lib/sketch";
-  import { message } from "$lib/i18n";
-  import SaveIcon from "./save.svelte";
+  import { sketch } from "$lib/stores/sketch";
+  import { message } from "$lib/stores/i18n";
+  import SaveIcon from "./saveIcon.svelte";
 </script>
 
 <button disabled={true}>

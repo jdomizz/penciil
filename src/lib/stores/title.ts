@@ -1,7 +1,7 @@
 import { derived } from 'svelte/store';
 import { page } from '$app/stores';
-import { message } from "$lib/i18n";
-import { sketch } from "$lib/sketch";
+import { message } from "$lib/stores/i18n";
+import { sketch } from "$lib/stores/sketch";
 
 export const title = derived([page, sketch, message], ([$page, $sketch, $message]) => {
   const i18nKey = getTitleKey($page.path, $sketch.animationRunning);

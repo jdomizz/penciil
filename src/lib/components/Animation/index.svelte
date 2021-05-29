@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { sketch } from "$lib/sketch";
-  import { imageToAscii, updateAscii } from "./ascii";
+  import { sketch } from "$lib/stores/sketch";
+  import { imageToAscii, updateAscii } from "$lib/utils/ascii";
 
   let ascii = "";
 

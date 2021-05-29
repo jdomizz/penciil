@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { sketch } from "$lib/sketch";
+  import { sketch } from "$lib/stores/sketch";
   import ClearButton from "$lib/components/ClearButton/index.svelte";
   import EditButtonGroup from "$lib/components/EditButtonGroup/index.svelte";
   import SaveButton from "$lib/components/SaveButton/index.svelte";
