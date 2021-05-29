@@ -18,7 +18,6 @@
 
 <style>
   section {
-    margin-top: -2em;
     height: 100%;
     position: relative;
     display: flex;

@@ -10,6 +10,10 @@
     painter.eraser = $sketch.eraserMode;
   }
 
+  $: if (painter && !painter.enabled && $sketch.image === null) {
+    painter = new Painter(canvas);
+  }
+
   onMount(() => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;

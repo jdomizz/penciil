@@ -4,7 +4,7 @@
   import TrashIcon from "./trashIcon.svelte";
 </script>
 
-<button disabled={$sketch.image === null}>
+<button disabled={$sketch.image === null} on:click={sketch.reset}>
   <TrashIcon/>
   <span>{$message("button.clear")}</span>
 </button>

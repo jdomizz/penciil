@@ -6,7 +6,7 @@
   import { message } from "$lib/stores/i18n";
   import Logo from '$lib/components/Logo/index.svelte';
   import InstallButton from "$lib/components/InstallButton/index.svelte";
-  import githubIcon from './github.svg';
+  import GithubLink from "$lib/components/GithubLink/index.svelte";
 
 </script>
 
@@ -29,15 +29,12 @@
     <a href="https://domi.land/">domi.land</a>
   </p>
   <div>
-    <a href="https://github.com/jdomizz/penciil" target="_blank">
-      <img src={githubIcon} alt="GitHub" />
-    </a>
+    <GithubLink />
   </div>
 </section>
 
 <style>
   section {
-    margin-top: -2em;
     height: 100%;
     position: relative;
     display: flex;
@@ -58,8 +55,5 @@
   }
   a {
     text-decoration: underline;
-  }
-  img {
-    width: 24px;
   }
 </style>
