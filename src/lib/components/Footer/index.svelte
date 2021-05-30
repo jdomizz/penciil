@@ -1,14 +1,25 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+  import { sketch } from "$lib/stores/sketch";
   import ClearButton from "$lib/components/ClearButton/index.svelte";
+  import EditButton from "$lib/components/EditButton/index.svelte";
   import EditButtonGroup from "$lib/components/EditButtonGroup/index.svelte";
   import PlayButton from "$lib/components/PlayButton/index.svelte";
 </script>
 
-<footer>
-  <ClearButton />
-  <EditButtonGroup />
-  <PlayButton />
-</footer>
+
+{#if ($page.path === '/sketch')}
+  <footer>
+    <ClearButton />
+    {#if !$sketch.animationRunning}
+      <EditButtonGroup />
+      <PlayButton />
+    {:else}
+    <EditButton />
+    {/if}
+  </footer>
+{/if}
+
 
 <style>
 	footer {
@@ -24,4 +35,9 @@
 		background-color: white;
     border-top: solid 1px #dddddd;
 	}
+  @media (min-width: 768px) {
+    footer {
+      display: none;
+    }
+}
 </style>

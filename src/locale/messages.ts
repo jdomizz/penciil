@@ -2,7 +2,7 @@ export default {
   en: {
     about: {
       title: 'About Penciil',
-      description: 'es un bloc de dibujo sencillo que genera animaciones ASCII a partir de tus bocetos.',
+      description: 'is a straightforward sketchpad that generates ASCII art animations from your sketches.',
       help: 'To draw or erase on the canvas use the mouse (on a computer) or your finger (on a mobile device). When you are done press the play button to generate the animation.',
       install: 'You can use it online or install it.',
       credits: 'Crafted with ♥ in',

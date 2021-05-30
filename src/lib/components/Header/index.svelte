@@ -18,13 +18,12 @@
   <div class="side">
     {#if $page.path === '/sketch'}
       {#if $sketch.animationRunning}
-        <EditButton />
         <ThemeButton />
       {:else}
         <!-- <SaveButton /> -->
       {/if}
     {/if}
-    {#if $page.path !== '/about'}
+    {#if $page.path === '/'}
       <HelpButton />
     {/if}
     <LanguageSelect />
