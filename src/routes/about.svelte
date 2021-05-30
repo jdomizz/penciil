@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-	import { message } from '$lib/stores/i18n';
+	import { message } from '$lib/i18n';
 	// import InstallButton from '$lib/components/InstallButton/index.svelte';
 </script>
 

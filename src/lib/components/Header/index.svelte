@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { title } from '$lib/stores/title';
-	import { sketch } from '$lib/stores/sketch';
+	import { title } from '$lib/title';
+	import { sketch } from '$lib/sketch';
 	// import SaveButton from "$lib/components/SaveButton/index.svelte";
 	import ThemeButton from '$lib/components/ThemeSwitch/index.svelte';
 	import HelpButton from '$lib/components/HelpButton/index.svelte';

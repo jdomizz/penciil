@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { locale, messages } from '$lib/stores/i18n';
-	import { sketches } from '$lib/stores/sketch';
+	import { locale, messages } from '$lib/i18n';
+	import { sketches } from '$lib/sketch';
 	import type { Sketch } from '$lib/types';
 	import Header from '$lib/components/Header/index.svelte';
 	import Footer from '$lib/components/Footer/index.svelte';

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { sketch } from '$lib/stores/sketch';
+	import { sketch } from '$lib/sketch';
 	import moonIcon from './moon.svg';
 </script>
 

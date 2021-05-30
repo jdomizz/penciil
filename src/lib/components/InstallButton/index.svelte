@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { message } from '$lib/stores/i18n';
+	import { message } from '$lib/i18n';
 	import downloadIcon from './download.svg';
 </script>
 

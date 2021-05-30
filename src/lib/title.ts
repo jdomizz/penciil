@@ -1,6 +1,6 @@
 import { derived } from 'svelte/store';
 import { page } from '$app/stores';
-import { message } from '$lib/stores/i18n';
+import { message } from '$lib/i18n';
 
 export const title = derived([page, message], ([$page, $message]) => {
 	const i18nKey = getTitleKey($page.path);

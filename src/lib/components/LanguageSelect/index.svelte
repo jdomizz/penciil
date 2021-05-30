@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { locale, messages } from '$lib/stores/i18n';
+	import { locale, messages } from '$lib/i18n';
 
 	$: languages = Object.keys($messages);
 </script>

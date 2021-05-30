@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { sketch } from '$lib/stores/sketch';
+	import { sketch } from '$lib/sketch';
 	import ClearButton from '$lib/components/ClearButton/index.svelte';
 	import EditButton from '$lib/components/EditButton/index.svelte';
 	import EditButtonGroup from '$lib/components/EditButtonGroup/index.svelte';

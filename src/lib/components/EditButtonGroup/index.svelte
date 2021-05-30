@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { message } from '$lib/stores/i18n';
-	import { sketch } from '$lib/stores/sketch';
+	import { message } from '$lib/i18n';
+	import { sketch } from '$lib/sketch';
 	import pencilIcon from './edit-2.svg';
 	import eraserIcon from './edit-3.svg';
 </script>
