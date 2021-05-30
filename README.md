@@ -21,8 +21,7 @@ The app is built using [TypeScript](https://www.typescriptlang.org/) with [Svelt
 The following `npm` scripts are available for development:
 
 - `dev`: runs the app for development, reloading on file changes
-- `build`: builds the app as a static site and outputs it in the `build` directory
+- `build`: builds the app and outputs it in the `build` directory
 - `preview`: serves the `build` directory for localhost requests
-- `preview:https`: serves the `build` directory for localhost requests using https
-- `lint`: provides diagnostics checks for unused css, a11y hints and js/ts compiler errors
 - `format`: formats the source code
+- `lint`: provides diagnostics checks for unused css, a11y hints and js/ts compiler errors
