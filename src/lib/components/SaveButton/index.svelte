@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { sketch } from "$lib/stores/sketch";
-  import { message } from "$lib/stores/i18n";
-  import SaveIcon from "./saveIcon.svelte";
+	import { sketch } from '$lib/stores/sketch';
+	import { message } from '$lib/stores/i18n';
+	import SaveIcon from './saveIcon.svelte';
 </script>
 
 <button disabled={true}>
-  <SaveIcon />
-  <span>{$message("button.save")}</span>
+	<SaveIcon />
+	<span>{$message('button.save')}</span>
 </button>

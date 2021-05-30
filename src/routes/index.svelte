@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-  import Welcome from '$lib/components/Welcome/index.svelte';
+	import Welcome from '$lib/components/Welcome/index.svelte';
 </script>
 
 <svelte:head>
