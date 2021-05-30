@@ -45,8 +45,7 @@
 		align-items: center;
     align-content: center;
 		background-color: white;
-    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%),
-      0 1px 4px 0 rgb(0 0 0 / 12%);
+    border-bottom: solid 1px #dddddd;
 	}
   .title {
     margin-left: 8px;

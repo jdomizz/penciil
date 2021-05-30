@@ -22,7 +22,6 @@
 		align-items: center;
     align-content: center;
 		background-color: white;
-    box-shadow: 1px 0 4px 0 rgb(0 0 0 / 20%), 1px 0 1px 0 rgb(0 0 0 / 14%),
-      1px 0 1px 0 rgb(0 0 0 / 12%);
+    border-top: solid 1px #dddddd;
 	}
 </style>
