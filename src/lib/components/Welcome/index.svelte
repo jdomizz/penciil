@@ -9,7 +9,7 @@
     <Logo />
   </div>
   <p>
-    <strong>Penciil</strong> {$message("app.description")} 🖍️
+    <strong>{$message("app.name")}</strong> {$message("app.description")} 🖍️
   </p>
   <div>
     <StartButton />

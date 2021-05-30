@@ -23,10 +23,10 @@
     {/if}
     {#if $page.path === '/sketch'}
       {#if $sketch.animationRunning}
-        <ThemeButton />
         <EditButton />
+        <ThemeButton />
       {:else}
-        <SaveButton />
+        <!-- <SaveButton /> -->
       {/if}
     {:else}
       <LanguageSelect />

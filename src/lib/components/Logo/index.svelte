@@ -7,6 +7,6 @@
 <style>
   img {
     width: 64px;
-    border: solid 2px;
+    border: solid 4px;
   }
 </style>

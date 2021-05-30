@@ -12,9 +12,6 @@
 
 <style>
   button {
-    border: 1px;
-    border-style: solid;
-    border-radius: 5%;
     background-color: black;
   }
   span {

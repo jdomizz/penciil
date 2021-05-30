@@ -4,56 +4,42 @@
 
 <script lang="ts">
   import { message } from "$lib/stores/i18n";
-  import Logo from '$lib/components/Logo/index.svelte';
+  import HelpButton from "$lib/components/HelpButton/index.svelte";
   import InstallButton from "$lib/components/InstallButton/index.svelte";
   import GithubLink from "$lib/components/GithubLink/index.svelte";
 
 </script>
 
 <svelte:head>
-	<title>Penciil - {$message("about.title")}</title>
+	<title>{$message("app.name")} - {$message("about.title")}</title>
 </svelte:head>
 
 <section>
-  <div>
-    <Logo />
-  </div>
-  <p>
-    <strong>Penciil</strong> {$message("about.description")}
-  </p>
-  <div>
-    <InstallButton />
-  </div>
-  <p>
-    {$message("about.credits")} 
-    <a href="https://domi.land/">domi.land</a>
-  </p>
-  <div>
-    <GithubLink />
-  </div>
+  <p><strong>{$message("app.name")}</strong> {$message("about.description")}</p>
+  <p>{$message("about.help")}</p>
+  <p>{$message("about.install")}</p>
+  <p>{$message("about.credits")} <a href="https://domi.land/">domi.land</a>.</p>
 </section>
+<div class="footer">
+  <!-- <InstallButton /> -->
+</div>
 
 <style>
   section {
-    height: 100%;
-    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-  }
-  div {
-    display: flex;
-    justify-content: center;
-  }
-  p {
-    margin-top: 32px;
-    margin-bottom: 32px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 16em;
-    text-align: center;
+    padding: 24px;
+    margin-top: 56px;
   }
   a {
     text-decoration: underline;
+  }
+  .footer {
+    z-index: 10;
+		position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 </style>
