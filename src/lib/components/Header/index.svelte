@@ -20,7 +20,7 @@
   <div class="side">
     {#if $page.path === '/'}
       <!-- <CreateButton /> -->
-      <AboutButton />
+      <!-- <AboutButton /> -->
       <LanguageSelect />
     {/if}
     {#if $page.path === '/sketch'}
