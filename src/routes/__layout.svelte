@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { onMount } from "svelte";
 	import { page } from '$app/stores';
-	import { sketch } from "$lib/stores/sketch";
+	import { sketch, sketches } from "$lib/stores/sketch";
 	import { locale, messages } from "$lib/stores/i18n";
+	import type { Sketch } from "$lib/types";
 	import Header from '$lib/components/Header/index.svelte';
 	import Footer from '$lib/components/Footer/index.svelte';
 	import '../app.css';
@@ -10,11 +11,19 @@
   $: languages = Object.keys($messages);
 
   onMount(() => {
-    const userLang = window.navigator.language.split('-')[0];
-		const isAvailable = languages.filter(item => item === userLang).length === 1;
+    const userLanguage = navigator.language.split('-')[0];
+		const isAvailable = languages.filter(item => item === userLanguage).length === 1;
     if (isAvailable) {
-      locale.set(userLang);
+      locale.set(userLanguage);
     }
+		const userSketchesKey = 'sketches';
+		const userSketches = localStorage.getItem(userSketchesKey);
+		if (userSketches) {
+			sketches.set(JSON.parse(userSketches) as Sketch[]);
+		} 
+    // } else {
+		// 	localStorage.setItem(userSketchesKey, JSON.stringify([]));
+		// }
   });
 </script>
 
