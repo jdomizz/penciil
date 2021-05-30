@@ -4,30 +4,32 @@
   import { sketch } from "$lib/stores/sketch";
 	import SaveButton from "$lib/components/SaveButton/index.svelte";
   import ThemeButton from "$lib/components/ThemeSwitch/index.svelte";
-  import AboutButton from "$lib/components/AboutButton/index.svelte";
+  import HelpButton from "$lib/components/HelpButton/index.svelte";
+  import HomeLink from "$lib/components/HomeLink/index.svelte";
   import CreateButton from "$lib/components/CreateButton/index.svelte";
-  import BackButton from "$lib/components/BackButton/index.svelte";
+  import EditButton from "$lib/components/EditButton/index.svelte";
   import LanguageSelect from "$lib/components/LanguageSelect/index.svelte";
 </script>
 
 <header>
 	<div class="side"> 
-    {#if $page.path !== '/'}
-      <BackButton />
-    {/if}
+    <HomeLink />
     <span class="title">{$title}</span>
   </div>
   <div class="side">
     {#if $page.path === '/'}
       <!-- <CreateButton /> -->
-      <!-- <AboutButton /> -->
-      <LanguageSelect />
+      <HelpButton />
     {/if}
     {#if $page.path === '/sketch'}
       {#if $sketch.animationRunning}
         <ThemeButton />
+        <EditButton />
+      {:else}
+        <SaveButton />
       {/if}
-      <SaveButton />
+    {:else}
+      <LanguageSelect />
     {/if}
   </div>
 </header>

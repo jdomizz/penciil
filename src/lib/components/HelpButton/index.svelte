@@ -1,9 +1,9 @@
 <script lang="ts">
-  import infoIcon from "./info.svg";
+  import helpIcon from "./help-circle.svg";
 </script>
 
 <a sveltekit:prefetch href="/about">
   <button>
-    <img src={infoIcon} alt="Info" />
+    <img src={helpIcon} alt="About" />
   </button>
 </a>
