@@ -4,8 +4,8 @@
 </script>
 
 <label class="switch">
-  <input type="checkbox" on:click={sketch.toogleTheme}>
-  <div class="slide round">
+  <input type="checkbox" on:click={sketch.toogleTheme} checked={$sketch.darkTheme}>
+  <div class="slide">
     <img src={moonIcon} alt="Moon" />
   </div>
 </label>
@@ -37,10 +37,10 @@
 .slide:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 24px;
+  width: 24px;
   left: 38px;
-  bottom: 4px;
+  bottom: 5px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
@@ -54,11 +54,5 @@ input:checked + .slide:before {
   -ms-transform: translateX(26px);
   transform: translateX(26px);
   left: -20px;
-}
-.slide.round {
-  border-radius: 34px;
-}
-.slide.round:before {
-  border-radius: 50%;
 }
 </style>
