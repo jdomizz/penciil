@@ -16,7 +16,7 @@ To draw or erase on the canvas use the mouse (on a computer) or your finger (on 
 
 ## Development
 
-The app is built using [TypeScript](https://www.typescriptlang.org/) with [SvelteKit](https://kit.svelte.dev/) and borrows icons from [Feather](https://feathericons.com/).
+The application is built using [TypeScript](https://www.typescriptlang.org/) with [SvelteKit](https://kit.svelte.dev/) and borrows icons from [Feather](https://feathericons.com/).
 
 The following `npm` scripts are available for development:
 
@@ -25,3 +25,7 @@ The following `npm` scripts are available for development:
 - `lint`: provides diagnostics checks for unused css, a11y hints and js/ts compiler errors
 - `build`: builds the app and outputs it in the `build` directory
 - `preview`: serves the `build` directory for localhost requests
+
+## License
+
+Distributed under the MIT License.

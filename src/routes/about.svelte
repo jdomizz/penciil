@@ -23,10 +23,18 @@
 
 <style>
 	section {
+		height: 100%;
+		position: relative;
 		display: flex;
 		flex-direction: column;
-		padding: 24px;
-		margin-top: 56px;
+		justify-content: flex-start;
+    margin-top: 92px;
+	}
+	p {
+		margin-left: auto;
+		margin-right: auto;
+		width: 16em;
+		text-align: center;
 	}
 	a {
 		text-decoration: underline;
