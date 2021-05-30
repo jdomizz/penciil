@@ -2,11 +2,10 @@
   import { page } from '$app/stores';
   import { title } from "$lib/stores/title";
   import { sketch } from "$lib/stores/sketch";
-	import SaveButton from "$lib/components/SaveButton/index.svelte";
+	// import SaveButton from "$lib/components/SaveButton/index.svelte";
   import ThemeButton from "$lib/components/ThemeSwitch/index.svelte";
   import HelpButton from "$lib/components/HelpButton/index.svelte";
   import HomeLink from "$lib/components/HomeLink/index.svelte";
-  import CreateButton from "$lib/components/CreateButton/index.svelte";
   import EditButton from "$lib/components/EditButton/index.svelte";
   import LanguageSelect from "$lib/components/LanguageSelect/index.svelte";
 </script>
@@ -17,10 +16,6 @@
     <span class="title">{$title}</span>
   </div>
   <div class="side">
-    {#if $page.path === '/'}
-      <!-- <CreateButton /> -->
-      <HelpButton />
-    {/if}
     {#if $page.path === '/sketch'}
       {#if $sketch.animationRunning}
         <EditButton />
@@ -28,9 +23,11 @@
       {:else}
         <!-- <SaveButton /> -->
       {/if}
-    {:else}
-      <LanguageSelect />
     {/if}
+    {#if $page.path !== '/about'}
+      <HelpButton />
+    {/if}
+    <LanguageSelect />
   </div>
 </header>
 

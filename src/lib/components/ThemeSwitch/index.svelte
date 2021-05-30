@@ -16,7 +16,7 @@
   display: inline-block;
   width: 70px;
   height: 34px;
-  margin: 0 4px;
+  margin: 0 8px 0 4px;
 }
 .switch input {
   display:none;

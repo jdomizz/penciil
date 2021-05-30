@@ -23,7 +23,7 @@ export default {
       start: 'Start',
     },
     sketch: {
-      title: 'Untitled sketch',
+      title: 'Sketch',
     }
   },
   es: {
@@ -50,7 +50,7 @@ export default {
       start: 'Comenzar',
     },
     sketch: {
-      title: 'Boceto sin título',
+      title: 'Boceto',
     }
   }
 };
