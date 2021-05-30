@@ -1,13 +1,13 @@
 <script lang="ts">
   import ClearButton from "$lib/components/ClearButton/index.svelte";
   import EditButtonGroup from "$lib/components/EditButtonGroup/index.svelte";
-  import SaveButton from "$lib/components/SaveButton/index.svelte";
+  import PlayButton from "$lib/components/PlayButton/index.svelte";
 </script>
 
 <footer>
   <ClearButton />
   <EditButtonGroup />
-  <SaveButton />
+  <PlayButton />
 </footer>
 
 <style>
