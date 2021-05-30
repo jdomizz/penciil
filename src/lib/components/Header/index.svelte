@@ -26,9 +26,8 @@
     {#if $page.path === '/sketch'}
       {#if $sketch.animationRunning}
         <ThemeButton />
-      {:else}
-      <SaveButton />
       {/if}
+      <SaveButton />
     {/if}
   </div>
 </header>
