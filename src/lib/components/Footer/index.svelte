@@ -39,5 +39,5 @@
     footer {
       display: none;
     }
-}
+  }
 </style>

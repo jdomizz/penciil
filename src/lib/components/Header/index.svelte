@@ -6,7 +6,10 @@
   import ThemeButton from "$lib/components/ThemeSwitch/index.svelte";
   import HelpButton from "$lib/components/HelpButton/index.svelte";
   import HomeLink from "$lib/components/HomeLink/index.svelte";
+  import ClearButton from "$lib/components/ClearButton/index.svelte";
   import EditButton from "$lib/components/EditButton/index.svelte";
+  import EditButtonGroup from "$lib/components/EditButtonGroup/index.svelte";
+  import PlayButton from "$lib/components/PlayButton/index.svelte";
   import LanguageSelect from "$lib/components/LanguageSelect/index.svelte";
 </script>
 
@@ -18,9 +21,17 @@
   <div class="side">
     {#if $page.path === '/sketch'}
       {#if $sketch.animationRunning}
+        <div>
+          <ClearButton /> 
+          <EditButton />
+        </div>
         <ThemeButton />
       {:else}
-        <!-- <SaveButton /> -->
+        <div>
+          <EditButtonGroup />
+          <ClearButton /> 
+          <PlayButton />
+        </div>
       {/if}
     {/if}
     {#if $page.path === '/'}
@@ -51,5 +62,13 @@
 	.side {
     display: flex;
     align-items: center;
+  }
+  div {
+    display: flex;
+  }
+  @media (max-width: 768px) {
+    div {
+      display: none;
+    }
   }
 </style>
