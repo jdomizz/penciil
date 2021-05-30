@@ -1,8 +1,9 @@
 <script lang="ts">
+  import { sketch } from "$lib/stores/sketch";
   import logoIcon from "./logo.svg";
 </script>
 
-<a sveltekit:prefetch href="/">
+<a sveltekit:prefetch href="/" on:click={sketch.reset}>
   <img src={logoIcon} alt="Logo" />
 </a>
 

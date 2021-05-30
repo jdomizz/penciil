@@ -4,10 +4,7 @@
 
 <script lang="ts">
   import { message } from "$lib/stores/i18n";
-  import HelpButton from "$lib/components/HelpButton/index.svelte";
   import InstallButton from "$lib/components/InstallButton/index.svelte";
-  import GithubLink from "$lib/components/GithubLink/index.svelte";
-
 </script>
 
 <svelte:head>

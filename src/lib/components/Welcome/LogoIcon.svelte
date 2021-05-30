@@ -11,3 +11,11 @@ fill="#000000" stroke="#ffffff">
 -160 400 0 400 0 0 160 0 160 -160 0 -160 0 0 480 0 480 -240 0 -240 0 0 -160z"/>
 </g>
 </svg>
+
+<style>
+  svg {
+    width: 64px;
+    height: 64px;
+    border: solid 4px;
+  }
+</style>

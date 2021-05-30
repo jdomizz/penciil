@@ -1,12 +1,12 @@
 <script lang="ts">
   import { message } from "$lib/stores/i18n";
-  import Logo from '$lib/components/Logo/index.svelte';
   import StartButton from '$lib/components/StartButton/index.svelte';
+  import LogoIcon from './LogoIcon.svelte';
 </script>
 
 <section>
   <div>
-    <Logo />
+    <LogoIcon />
   </div>
   <p>
     <strong>{$message("app.name")}</strong> {$message("app.description")} 🖍️
