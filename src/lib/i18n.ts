@@ -6,15 +6,15 @@ export const locale = writable('en');
 export const messages = writable<Record<string, Record<string, unknown>>>(messagesFile);
 
 const translations = derived([messages, locale], ([$messages, $locale]) => {
-	return $messages[$locale];
+  return $messages[$locale];
 });
 
 export const message = derived(translations, ($translations) => {
-	return (key: string) => getMessage(key, $translations);
+  return (key: string) => getMessage(key, $translations);
 });
 
 const getMessage = (key: string, translations: Record<string, unknown>) => {
-	return key
-		.split('.')
-		.reduce((accumulator, item) => accumulator[item], { ...translations }) as string;
+  return key
+    .split('.')
+    .reduce((accumulator, item) => accumulator[item], { ...translations }) as string;
 };

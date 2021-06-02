@@ -26,6 +26,10 @@ The following `npm` scripts are available for development:
 - `build`: builds the app and outputs it in the `build` directory
 - `preview`: serves the `build` directory for localhost requests
 
+## Issues
+
+- [ ] Animation error occurring on wide and narrow screens
+
 ## License
 
 Distributed under the MIT License.

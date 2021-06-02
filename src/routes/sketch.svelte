@@ -1,27 +1,27 @@
 <script context="module" lang="ts">
-	export const prerender = true;
+  export const prerender = true;
 </script>
 
 <script lang="ts">
-	import { title } from '$lib/title';
-	import { sketch } from '$lib/sketch';
-	import Animation from '$lib/components/Animation/index.svelte';
-	import Canvas from '$lib/components/Canvas/index.svelte';
+  import { title } from '$lib/title';
+  import { sketch } from '$lib/sketch';
+  import Animation from '$lib/components/Animation/index.svelte';
+  import Canvas from '$lib/components/Canvas/index.svelte';
 </script>
 
 <svelte:head>
-	<title>Penciil - {$title}</title>
+  <title>Penciil - {$title}</title>
 </svelte:head>
 
 <div class={$sketch.animationRunning ? 'hidden' : ''}>
-	<Canvas />
+  <Canvas />
 </div>
 {#if $sketch.animationRunning}
-	<Animation />
+  <Animation />
 {/if}
 
 <style>
-	.hidden {
-		display: none;
-	}
+  .hidden {
+    display: none;
+  }
 </style>
