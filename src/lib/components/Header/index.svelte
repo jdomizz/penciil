@@ -20,17 +20,20 @@
   </div>
   <div class="side">
     {#if $page.path === '/sketch'}
-      <div>
         {#if $sketch.animationRunning}         
           <ThemeButton />
-          <ClearButton />
-          <EditButton />      
-        {:else}       
+          <div>
+            <ClearButton />
+            <EditButton />    
+          </div>
+         
+        {:else}  
+        <div>
           <EditButtonGroup />
           <ClearButton />
-          <PlayButton />     
-        {/if}
-      </div>
+          <PlayButton />   
+        </div>      
+      {/if}
     {/if}
     {#if $page.path === '/'}
       <HelpButton />
