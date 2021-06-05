@@ -1,6 +1,6 @@
 import { loadImage } from './image';
 
-const symbols = '01';
+const palette = '01';
 
 export async function imageToAscii(imageSrc: string): Promise<string> {
   const image = await loadImage(imageSrc);
@@ -15,36 +15,33 @@ export async function imageToAscii(imageSrc: string): Promise<string> {
 
 function createAscii(image: ImageData): string {
   return image.data.reduce((text, _, index, data) => {
-    let symbol = '';
+    let char = '';
     if (index % 4 === 0) {
       if (index % image.width === 0) {
-        symbol = '\n';
+        char = '\n';
       } else {
         const rgba = [data[index], data[index + 1], data[index + 2], data[index + 3]];
-        symbol = rgba[0] < 120 && rgba[3] >= 50 ? randomSymbol() : ' ';
+        char = rgba[0] < 120 && rgba[3] >= 50 ? randomPaletteChar() : ' ';
       }
     }
-    return `${text}${symbol}`;
+    return `${text}${char}`;
   }, '');
 }
 
 export function updateAscii(text: string): string {
   return text
     .split('')
-    .map((char) => replaceSymbol(char))
+    .map((char) => isInPalette(char) ? randomPaletteChar() : char)
     .join('');
 }
 
-function replaceSymbol(char: string): string {
-  return isSymbol(char) ? randomSymbol() : char;
+function randomPaletteChar(): string {
+  return palette[Math.floor(Math.random() * palette.length)];
 }
 
-function randomSymbol(): string {
-  const symbol = Math.floor(Math.random() * symbols.length);
-  return symbols[symbol];
-}
-
-function isSymbol(char: string): boolean {
-  const filterResult = symbols.split('').filter((symbol) => symbol === char);
-  return filterResult.length !== 0;
+function isInPalette(char: string): boolean {
+  return palette
+    .split('')
+    .filter((item) => item === char)
+    .length === 1;
 }
