@@ -25,6 +25,10 @@
     display: block;
     font-family: monospace;
     white-space: pre;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -6px;
   }
 
   .dark {

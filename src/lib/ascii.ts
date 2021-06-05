@@ -1,16 +1,19 @@
-import { loadImageData } from './image';
+import { loadImage } from './image';
 
 const symbols = '01';
 
 export async function imageToAscii(imageSrc: string): Promise<string> {
-  return createAscii(await loadImageData(imageSrc));
+  const image = await loadImage(imageSrc);
+  const canvas = document.createElement('canvas');
+  canvas.width = window.innerWidth / 6; // -> font-size
+  canvas.height = window.innerHeight / 10; // -> line-height
+  const context = canvas.getContext('2d');
+  context.drawImage(image, 0, 0, canvas.width, canvas.height);
+  const data = context.getImageData(0, 0, canvas.width, canvas.height);
+  return data ? createAscii(data) : '';
 }
 
 function createAscii(image: ImageData): string {
-  // FIXME: refactor
-  if (!image) {
-    return '';
-  }
   return image.data.reduce((text, _, index, data) => {
     let symbol = '';
     if (index % 4 === 0) {

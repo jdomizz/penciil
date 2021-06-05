@@ -30,6 +30,18 @@ The following `npm` scripts are available for development:
 
 - [ ] Animation error occurring on wide and narrow screens
 
+font-size, line-height, margin-top
+
+// Math.ceil(6 + window.innerWidth / window.innerHeight); // 2x3, // 0.6
+
+// Math.ceil(5 + window.innerWidth / window.innerHeight); // 1x1 // 1
+// Math.ceil(5 + window.innerWidth / window.innerHeight) - 0.5; // 4x3 // 1.3
+// Math.ceil(7 + window.innerWidth / window.innerHeight) - 0.5; // 5x3 (14px) // 1.6
+
+// Math.ceil(3 + window.innerWidth / window.innerHeight); // 6.6x3 // 2 | 2.3
+// Math.ceil(4 + window.innerWidth / window.innerHeight); // 7.6x3 (12px) // 2.3 | 2.6
+// Math.ceil(8 + window.innerWidth / window.innerHeight); // 8.6x3 (18px) // 2.6 | 3
+
 ## License
 
 Distributed under the MIT License.
