@@ -14,18 +14,21 @@ export async function imageToAscii(imageSrc: string): Promise<string> {
 }
 
 function createAscii(image: ImageData): string {
-  return image.data.reduce((text, _, index, data) => {
-    let char = '';
-    if (index % 4 === 0) {
-      if (index % image.width === 0) {
-        char = '\n';
+  let result = '';
+  for(let i = 0; i < image.data.length; i += 4){
+    if ( i % image.width === 0){
+      result = result.concat('\n');
+    } else {
+      const red = image.data[i];
+      const alpha = image.data[i+3];
+      if (red < 120 && alpha >= 50) {
+        result = result.concat(randomPaletteChar());
       } else {
-        const rgba = [data[index], data[index + 1], data[index + 2], data[index + 3]];
-        char = rgba[0] < 120 && rgba[3] >= 50 ? randomPaletteChar() : ' ';
+        result = result.concat(' ');
       }
     }
-    return `${text}${char}`;
-  }, '');
+  }
+  return result;
 }
 
 export function updateAscii(text: string): string {
