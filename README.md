@@ -28,6 +28,8 @@ The following `npm` scripts are available for development:
 
 ## Issues
 
+8 antes de 440, 7 a partir de 440 (para 946)
+
 - [ ] Animation error occurring on wide and narrow screens
 
 2319x946 - 5.5 | 2.45

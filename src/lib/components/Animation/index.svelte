@@ -7,6 +7,8 @@
 
   $: (async () => (ascii = await imageToAscii($sketch.image)))();
 
+  // const margin = () => Math.abs(window.innerWidth - window.innerHeight);
+
   onMount(() => {
     setInterval(() => {
       ascii = updateAscii(ascii);
@@ -28,7 +30,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -6px;
+    justify-content: center;
+    /* margin-top: -10px; */
+    height: 100%;
   }
 
   .dark {

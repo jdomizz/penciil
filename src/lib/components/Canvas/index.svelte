@@ -14,9 +14,13 @@
     painter = new Painter(canvas);
   }
 
+  const size = () => window.innerWidth < window.innerHeight 
+    ? window.innerWidth
+    : window.innerHeight;
+
   onMount(() => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = size();
+    canvas.height = size();
     painter = new Painter(canvas);
   });
 
@@ -38,8 +42,7 @@
 
 <style>
   canvas {
-    width: 100%;
-    height: 100%;
     cursor: pointer;
+    border: dashed 1px #cccccc;
   }
 </style>

@@ -2,11 +2,18 @@ import { loadImage } from './image';
 
 const palette = '01';
 
+// FIXME: repetido
+const size = () => window.innerWidth < window.innerHeight 
+    ? window.innerWidth
+    : window.innerHeight;
+
+const offset = () => window.innerWidth > 440 ? 7 : 8;
+
 export async function imageToAscii(imageSrc: string): Promise<string> {
   const image = await loadImage(imageSrc);
   const canvas = document.createElement('canvas');
-  canvas.width = window.innerWidth / 6; // -> font-size
-  canvas.height = window.innerHeight / 10; // -> line-height
+  canvas.width = size() / offset(); // offset(); // 6; // -> font-size
+  canvas.height = size() / 10; // -> line-height
   const context = canvas.getContext('2d');
   context.drawImage(image, 0, 0, canvas.width, canvas.height);
   const data = context.getImageData(0, 0, canvas.width, canvas.height);
@@ -15,7 +22,7 @@ export async function imageToAscii(imageSrc: string): Promise<string> {
 
 function createAscii(image: ImageData): string {
   let result = '';
-  for(let i = 0; i < image.data.length; i += 4){
+  for (let i = 0; i < image.data.length; i += 4) {
     if ( i % image.width === 0){
       result = result.concat('\n');
     } else {
