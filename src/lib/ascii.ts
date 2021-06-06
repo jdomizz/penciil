@@ -2,22 +2,34 @@ import { loadImage } from './image';
 
 const palette = '01';
 
-// FIXME: repetido
-const size = () => window.innerWidth < window.innerHeight 
-    ? window.innerWidth
-    : window.innerHeight;
-
-const offset = () => window.innerWidth > 440 ? 7 : 8;
-
 export async function imageToAscii(imageSrc: string): Promise<string> {
   const image = await loadImage(imageSrc);
   const canvas = document.createElement('canvas');
-  canvas.width = size() / offset(); // offset(); // 6; // -> font-size
-  canvas.height = size() / 10; // -> line-height
+  canvas.width =  width(image.width, image.height); // -> font-size
+  canvas.height = image.height / 10; // -> line-height
   const context = canvas.getContext('2d');
   context.drawImage(image, 0, 0, canvas.width, canvas.height);
   const data = context.getImageData(0, 0, canvas.width, canvas.height);
   return data ? createAscii(data) : '';
+}
+
+const width = (width: number, height: number): number => {
+  const aspectRatio = width / height;
+  let magic = 6;
+  if (aspectRatio < 1) {
+    magic = 6.5;
+    if (width >= 750 && width < 1000) {
+      magic = 7;
+    }
+  } else if (aspectRatio > 1) {
+    magic = 7;
+    if (width >= 800 && width < 1000) {
+      magic = 6;
+    } else if (width >= 1000 && width < 1300) {
+      magic = 6.5;
+    }
+  }
+  return width / magic;
 }
 
 function createAscii(image: ImageData): string {
