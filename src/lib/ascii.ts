@@ -1,35 +1,18 @@
 import { loadImage } from './image';
 
-const palette = '01';
+const glyphs = '01';
+const glyphWidth = 6;
+const glyphHeight = 10;
 
 export async function imageToAscii(imageSrc: string): Promise<string> {
   const image = await loadImage(imageSrc);
   const canvas = document.createElement('canvas');
-  canvas.width =  width(image.width, image.height); // -> font-size
-  canvas.height = image.height / 10; // -> line-height
+  canvas.width =  image.width / glyphWidth;
+  canvas.height = image.height / glyphHeight;
   const context = canvas.getContext('2d');
   context.drawImage(image, 0, 0, canvas.width, canvas.height);
   const data = context.getImageData(0, 0, canvas.width, canvas.height);
   return data ? createAscii(data) : '';
-}
-
-const width = (width: number, height: number): number => {
-  const aspectRatio = width / height;
-  let magic = 6;
-  if (aspectRatio < 1) {
-    magic = 6.5;
-    if (width >= 750 && width < 1000) {
-      magic = 7;
-    }
-  } else if (aspectRatio > 1) {
-    magic = 7;
-    if (width >= 800 && width < 1000) {
-      magic = 6;
-    } else if (width >= 1000 && width < 1300) {
-      magic = 6.5;
-    }
-  }
-  return width / magic;
 }
 
 function createAscii(image: ImageData): string {
@@ -41,7 +24,7 @@ function createAscii(image: ImageData): string {
       const red = image.data[i];
       const alpha = image.data[i+3];
       if (red < 120 && alpha >= 50) {
-        result = result.concat(randomPaletteChar());
+        result = result.concat(randomGlyph());
       } else {
         result = result.concat(' ');
       }
@@ -53,17 +36,17 @@ function createAscii(image: ImageData): string {
 export function updateAscii(text: string): string {
   return text
     .split('')
-    .map((char) => isInPalette(char) ? randomPaletteChar() : char)
+    .map((char) => isGlyph(char) ? randomGlyph() : char)
     .join('');
 }
 
-function randomPaletteChar(): string {
-  return palette[Math.floor(Math.random() * palette.length)];
+function randomGlyph(): string {
+  return glyphs[Math.floor(Math.random() * glyphs.length)];
 }
 
-function isInPalette(char: string): boolean {
-  return palette
+function isGlyph(char: string): boolean {
+  return glyphs
     .split('')
-    .filter((item) => item === char)
+    .filter((glyph) => glyph === char)
     .length === 1;
 }

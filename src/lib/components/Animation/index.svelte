@@ -20,16 +20,12 @@
 
 <style>
   div {
-    font-size: 10px;
-    line-height: 10px;
-    display: block;
+    overflow: hidden;
+    padding: 0;    
     font-family: monospace;
     white-space: pre;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+    font-size: 10px;
+    line-height: 10px;
   }
 
   .dark {
