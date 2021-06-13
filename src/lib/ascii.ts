@@ -15,22 +15,42 @@ export async function imageToAscii(imageSrc: string): Promise<string> {
   return data ? createAscii(data) : '';
 }
 
-function createAscii(image: ImageData): string {
-  let result = '';
-  for (let i = 0; i < image.data.length; i += 4) {
-    if ( i % image.width === 0){
-      result = result.concat('\n');
-    } else {
-      const red = image.data[i];
-      const alpha = image.data[i+3];
-      if (red < 120 && alpha >= 50) {
-        result = result.concat(randomGlyph());
+function createAscii(data: ImageData): string {
+  // let result = '';
+  // for (let i = 0; i < image.data.length; i += 4) {
+  //   if ( i % image.width === 0){
+  //     result = result.concat('\n');
+  //   } else {
+  //     const red = image.data[i];
+  //     const alpha = image.data[i+3];
+  //     if (red < 120 && alpha >= 50) {
+  //       result = result.concat(randomGlyph());
+  //     } else {
+  //       result = result.concat(' ');
+  //     }
+  //   }
+  // }
+  // return result;
+  let chars = '';
+  let startOfFilledInSequence = 0;
+  let i = 0;
+  for (let y=0; y<data.height; y++) {
+    for (let x=0; x<data.width; x++) {
+      const black = data.data[i*4] < 120;
+      const transparent = data.data[i*4+3] < 50; 
+      if (black && !transparent) {
+        if (startOfFilledInSequence === null) startOfFilledInSequence = i;
+        chars += randomGlyph();
       } else {
-        result = result.concat(' ');
+        chars += " ";
+        startOfFilledInSequence = null;
       }
+      i++;
     }
+    chars += "\n";
+    startOfFilledInSequence = null;
   }
-  return result;
+  return chars;
 }
 
 export function updateAscii(text: string): string {
