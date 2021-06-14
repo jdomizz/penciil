@@ -30,7 +30,7 @@
   }
 
   .dark {
-    background-color: black !important;
-    color: white !important;
+    background-color: var(--primary-color);
+    color: var(--background-color);
   }
 </style>

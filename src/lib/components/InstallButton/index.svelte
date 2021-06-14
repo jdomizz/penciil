@@ -10,10 +10,10 @@
 
 <style>
   button {
-    background-color: black !important;
+    background-color: var(--primary-color);
     margin: 24px;
   }
   span {
-    color: white !important;
+    color: var(--background-color);
   }
 </style>

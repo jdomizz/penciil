@@ -12,9 +12,9 @@
 
 <style>
   button {
-    background-color: black !important;
+    background-color: var(--primary-color);
   }
   span {
-    color: white !important;
+    color: var(--background-color);
   }
 </style>

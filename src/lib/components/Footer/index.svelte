@@ -30,8 +30,8 @@
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    background-color: white !important;
-    border-top: solid 1px #dddddd !important;
+    background-color: var(--background-color);
+    border-top: solid 1px var(--secondary-color);
   }
   @media (min-width: 768px) {
     footer {

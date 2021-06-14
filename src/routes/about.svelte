@@ -36,9 +36,6 @@
     width: 16em;
     text-align: center;
   }
-  a {
-    text-decoration: underline;
-  }
   .footer {
     z-index: 10;
     position: fixed;
