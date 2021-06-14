@@ -23,6 +23,8 @@
     // } else {
     // 	localStorage.setItem(userSketchesKey, JSON.stringify([]));
     // }
+    // console.log(window.matchMedia('(prefers-color-scheme: dark)').matches);
+    
   });
 </script>
 
