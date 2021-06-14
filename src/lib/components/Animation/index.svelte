@@ -20,12 +20,13 @@
 
 <style>
   div {
+    padding: 0;
     overflow: hidden;
-    padding: 0;    
     font-family: monospace;
     white-space: pre;
     font-size: 10px;
     line-height: 10px;
+    height: 100%;
   }
 
   .dark {

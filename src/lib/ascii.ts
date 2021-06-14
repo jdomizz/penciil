@@ -15,42 +15,21 @@ export async function imageToAscii(imageSrc: string): Promise<string> {
   return data ? createAscii(data) : '';
 }
 
-function createAscii(data: ImageData): string {
-  // let result = '';
-  // for (let i = 0; i < image.data.length; i += 4) {
-  //   if ( i % image.width === 0){
-  //     result = result.concat('\n');
-  //   } else {
-  //     const red = image.data[i];
-  //     const alpha = image.data[i+3];
-  //     if (red < 120 && alpha >= 50) {
-  //       result = result.concat(randomGlyph());
-  //     } else {
-  //       result = result.concat(' ');
-  //     }
-  //   }
-  // }
-  // return result;
-  let chars = '';
-  let startOfFilledInSequence = 0;
-  let i = 0;
-  for (let y=0; y<data.height; y++) {
-    for (let x=0; x<data.width; x++) {
-      const black = data.data[i*4] < 120;
-      const transparent = data.data[i*4+3] < 50; 
-      if (black && !transparent) {
-        if (startOfFilledInSequence === null) startOfFilledInSequence = i;
-        chars += randomGlyph();
-      } else {
-        chars += " ";
-        startOfFilledInSequence = null;
-      }
-      i++;
+function createAscii(data: ImageData): string {  
+  let result = '';
+  for (let y = 0; y < data.height; y++) {
+    for (let x = 0; x < data.width; x++) {
+      const rgbaParts = 4;
+      const rgbaIndex = x * rgbaParts + y * rgbaParts * data.width;
+      const redComponent = data.data[rgbaIndex];
+      const alphaComponent = data.data[rgbaIndex + 3];
+      const isStroke = redComponent < 120 && alphaComponent >= 50;
+      const char = isStroke ? randomGlyph() : ' ';
+      result = result.concat(char);
     }
-    chars += "\n";
-    startOfFilledInSequence = null;
+    result = result.concat('\n');
   }
-  return chars;
+  return result;
 }
 
 export function updateAscii(text: string): string {
