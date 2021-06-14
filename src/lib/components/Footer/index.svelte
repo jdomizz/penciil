@@ -38,9 +38,4 @@
       display: none;
     }
   }
-  @media (prefers-color-scheme: dark) {
-    footer {
-      background-color: pink;
-    }
-  }
 </style>
