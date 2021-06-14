@@ -40,7 +40,7 @@
   }
   @media (prefers-color-scheme: dark) {
     footer {
-      background-color: var(--background-color);
+      background-color: pink;
     }
   }
 </style>
