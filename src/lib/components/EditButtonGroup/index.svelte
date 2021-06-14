@@ -24,14 +24,14 @@
     float: left;
     padding: 6px;
     margin: 0 !important;
-    background-color: #dddddd;
+    background-color: #dddddd !important;
   }
 
   button:disabled {
-    background-color: black;
+    background-color: black !important;
   }
 
   button > span {
-    color: white;
+    color: white !important;
   }
 </style>

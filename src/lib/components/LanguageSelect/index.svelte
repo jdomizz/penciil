@@ -16,6 +16,6 @@
   select {
     border: none;
     margin-right: 4px;
-    background-color: white;
+    background-color: white !important;
   }
 </style>

@@ -52,8 +52,8 @@
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    background-color: white;
-    border-bottom: solid 1px #dddddd;
+    background-color: white !important;
+    border-bottom: solid 1px #dddddd !important;
   }
   .title {
     margin-left: 8px;

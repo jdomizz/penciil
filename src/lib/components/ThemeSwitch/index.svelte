@@ -29,7 +29,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #dddddd;
+    background-color: #dddddd !important;
     -webkit-transition: 0.4s;
     transition: 0.4s;
     padding: 8px;
@@ -41,12 +41,12 @@
     width: 24px;
     left: 38px;
     bottom: 5px;
-    background-color: white;
+    background-color: white !important;
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
   input:checked + .slide {
-    background-color: black;
+    background-color: black !important;
     padding-left: 40px;
   }
   input:checked + .slide:before {

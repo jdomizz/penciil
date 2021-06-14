@@ -12,9 +12,9 @@
 
 <style>
   button {
-    background-color: black;
+    background-color: black !important;
   }
   span {
-    color: white;
+    color: white !important;
   }
 </style>

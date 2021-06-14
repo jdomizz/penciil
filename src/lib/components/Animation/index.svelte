@@ -30,7 +30,7 @@
   }
 
   .dark {
-    background-color: black;
-    color: white;
+    background-color: black !important;
+    color: white !important;
   }
 </style>
