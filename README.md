@@ -6,9 +6,7 @@
 
 ## About
 
-**Penciil** is a straightforward sketchpad that generates ASCII art animations from your drawings.
-
-It is delivered as a PWA so it can be used online or installed from [penciil.domi.land](https://penciil.domi.land/).
+**Penciil** is a straightforward sketchpad that generates ASCII art animations from your drawings. It can be used online or installed from [penciil.domi.land](https://penciil.domi.land/).
 
 ## Usage
 
@@ -22,9 +20,18 @@ The following `npm` scripts are available for development:
 
 - `dev`: runs the app for development, reloading on file changes
 - `format`: formats the source code
-- `lint`: provides diagnostics checks for unused css, a11y hints and js/ts compiler errors
+- `lint`: provides diagnostics, checks for compiler errors
 - `build`: builds the app and outputs it in the `build` directory
 - `preview`: serves the `build` directory for localhost requests
+
+## To Do
+
+- [ ] Store sketches in localstorage.
+- [ ] List sketches stored in localstorage.
+- [ ] Edit sketches stored in localstorage.
+- [ ] Implement the installation button.
+- [ ] Implement the service-worker (offline-first).
+- [ ] Refine the language selector.
 
 ## License
 

@@ -4,7 +4,7 @@
 
 <script lang="ts">
   import { message } from '$lib/i18n';
-  // import InstallButton from '$lib/components/InstallButton/index.svelte';
+  import InstallButton from '$lib/components/InstallButton/index.svelte';
 </script>
 
 <svelte:head>
@@ -18,7 +18,7 @@
   <p>{$message('about.credits')} <a href="https://domi.land/">domi.land</a>.</p>
 </section>
 <div class="footer">
-  <!-- <InstallButton /> -->
+  <InstallButton />
 </div>
 
 <style>

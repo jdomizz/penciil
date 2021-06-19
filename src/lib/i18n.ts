@@ -13,7 +13,7 @@ export const message = derived(translations, ($translations) => {
   return (key: string) => getMessage(key, $translations);
 });
 
-const getMessage = (key: string, translations: Record<string, unknown>) => {
+function getMessage(key: string, translations: Record<string, unknown>) {
   return key
     .split('.')
     .reduce((accumulator, item) => accumulator[item], { ...translations }) as string;

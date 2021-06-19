@@ -2,7 +2,7 @@
   import { page } from '$app/stores';
   import { title } from '$lib/title';
   import { sketch } from '$lib/sketch';
-  // import SaveButton from "$lib/components/SaveButton/index.svelte";
+  import SaveButton from "$lib/components/SaveButton/index.svelte";
   import ThemeButton from '$lib/components/ThemeSwitch/index.svelte';
   import HelpButton from '$lib/components/HelpButton/index.svelte';
   import HomeLink from '$lib/components/HomeLink/index.svelte';
@@ -24,9 +24,9 @@
           <ThemeButton />
           <div>
             <ClearButton />
-            <EditButton />    
+            <EditButton />
+            <SaveButton/>  
           </div>
-         
         {:else}  
         <div>
           <EditButtonGroup />
