@@ -1,10 +1,5 @@
-<script context="module" lang="ts">
-  export const prerender = true;
-</script>
-
 <script lang="ts">
   import { message } from '$lib/i18n';
-  import InstallButton from '$lib/components/InstallButton/index.svelte';
 </script>
 
 <svelte:head>
@@ -17,9 +12,6 @@
   <p>{$message('about.install')}</p>
   <p>{$message('about.credits')} <a href="https://domi.land/">domi.land</a>.</p>
 </section>
-<div class="footer">
-  <InstallButton />
-</div>
 
 <style>
   section {
@@ -35,13 +27,5 @@
     margin-right: auto;
     width: 16em;
     text-align: center;
-  }
-  .footer {
-    z-index: 10;
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
   }
 </style>

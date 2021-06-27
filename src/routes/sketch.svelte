@@ -1,7 +1,3 @@
-<script context="module" lang="ts">
-  export const prerender = true;
-</script>
-
 <script lang="ts">
   import { title } from '$lib/title';
   import { sketch } from '$lib/sketch';

@@ -17,4 +17,4 @@ function getMessage(key: string, translations: Record<string, unknown>) {
   return key
     .split('.')
     .reduce((accumulator, item) => accumulator[item], { ...translations }) as string;
-};
+}

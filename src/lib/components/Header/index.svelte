@@ -2,7 +2,7 @@
   import { page } from '$app/stores';
   import { title } from '$lib/title';
   import { sketch } from '$lib/sketch';
-  import SaveButton from "$lib/components/SaveButton/index.svelte";
+  // import SaveButton from "$lib/components/SaveButton/index.svelte";
   import ThemeButton from '$lib/components/ThemeSwitch/index.svelte';
   import HelpButton from '$lib/components/HelpButton/index.svelte';
   import HomeLink from '$lib/components/HomeLink/index.svelte';
@@ -20,19 +20,19 @@
   </div>
   <div class="side">
     {#if $page.path === '/sketch'}
-        {#if $sketch.animationRunning}         
-          <ThemeButton />
-          <div>
-            <ClearButton />
-            <EditButton />
-            <SaveButton/>  
-          </div>
-        {:else}  
+      {#if $sketch.animationRunning}
+        <ThemeButton />
+        <div>
+          <ClearButton />
+          <EditButton />
+          <!-- <SaveButton/>   -->
+        </div>
+      {:else}
         <div>
           <EditButtonGroup />
           <ClearButton />
-          <PlayButton />   
-        </div>      
+          <PlayButton />
+        </div>
       {/if}
     {/if}
     {#if $page.path === '/'}
