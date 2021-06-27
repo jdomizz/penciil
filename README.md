@@ -31,7 +31,6 @@ The following `npm` scripts are available for development:
 - [ ] Edit sketches stored in localstorage.
 - [ ] Implement the installation button.
 - [ ] Implement the service-worker (offline-first).
-- [ ] Refine the language selector.
 
 ## License
 
