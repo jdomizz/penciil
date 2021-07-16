@@ -21,15 +21,15 @@
   });
 
   function exportCanvas() {
-    painter.enabled = false;
+    painter.disable();
     sketch.updateImage(canvas.toDataURL());
   }
 </script>
 
 <canvas
   bind:this={canvas}
-  on:mousedown={() => (painter.enabled = true)}
-  on:touchstart={() => (painter.enabled = true)}
+  on:mousedown|preventDefault={(event) => painter.enable(event)}
+  on:touchstart|preventDefault={(event) => painter.enable(event)}
   on:mousemove|preventDefault={(event) => painter.paint(event)}
   on:touchmove|preventDefault={(event) => painter.paint(event)}
   on:mouseup={exportCanvas}
